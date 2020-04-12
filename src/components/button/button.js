@@ -4,10 +4,10 @@ const { buttonSizes, buttonTypes } = require('./theme/buttonTheme');
 const buttonPlugin = ({ addComponents }) => {
   const btnBaseStyle = {
     '.btn': {
-      border: 'none',
       position: 'relative',
       display: 'inline-flex',
       alignItems: 'center',
+      justifyContent: 'center',
       textDecoration: 'none',
       transition: '0.2s ease-in-out',
       transitionProperty: 'color, background-color, border-color',
@@ -34,6 +34,17 @@ const buttonPlugin = ({ addComponents }) => {
     {}
   );
 
+  const squareBtnSizeStyles = Object.keys(buttonSizes).reduce(
+    (acc, next) => ({
+      ...acc,
+      [`.btn-square.btn-size-${next}`]: {
+        width: buttonSizes[next].height,
+        height: buttonSizes[next].height,
+      },
+    }),
+    {}
+  );
+
   const [lightModeBtnTypes, darkModeBtnTypes] = colorModes.map((colorMode) =>
     Object.keys(buttonTypes[colorMode]).reduce(
       (classNames, type) => ({
@@ -55,23 +66,12 @@ const buttonPlugin = ({ addComponents }) => {
     )
   );
 
-  const buttonIcons = {
-    '.btn-icon-start': {
-      lineHeight: '0',
-      marginRight: '.25rem',
-    },
-    '.btn-icon-end': {
-      lineHeight: '0',
-      marginLeft: '.25rem',
-    },
-  };
-
   addComponents({
     ...btnBaseStyle,
     ...btnSizeStyles,
+    ...squareBtnSizeStyles,
     ...lightModeBtnTypes,
     ...darkModeBtnTypes,
-    ...buttonIcons,
   });
 };
 

@@ -10,56 +10,58 @@ import '../../../styles.css';
 
 ## Sizes
 
-<div className="mb-4">
-  <button className="btn btn-size-small btn-type-primary btn-emphasis-medium">
-    small button
-  </button>
-</div>
-<div className="mb-4">
-  <button className="btn btn-size-medium btn-type-primary btn-emphasis-medium">
-    medium button
-  </button>
-</div>
-<div className="mb-4">
-  <button className="btn btn-size-large btn-type-primary btn-emphasis-medium">
-    large button
-  </button>
+<div className="mb-12">
+  <div className="mb-4">
+    <button className="btn btn-size-small btn-type-primary btn-emphasis-medium">
+      Small
+    </button>
+  </div>
+  <div className="mb-4">
+    <button className="btn btn-size-medium btn-type-primary btn-emphasis-medium">
+      Medium
+    </button>
+  </div>
+  <div className="mb-4">
+    <button className="btn btn-size-large btn-type-primary btn-emphasis-medium">
+      Large
+    </button>
+  </div>
 </div>
 
 ## Types and emphasis
 
-<div className="flex flex-row -mh-4">
+<div className="flex flex-row -mh-4 mb-12">
   <div className="col col-auto ph-4">
     <div className="mb-4">
       <button className="btn btn-size-medium btn-type-primary btn-emphasis-low">
-        primary
+        Primary
       </button>
     </div>
     <div className="mb-4">
       <button className="btn btn-size-medium btn-type-primary btn-emphasis-medium">
-        primary
+        Primary
       </button>
     </div>
     <div className="mb-4">
       <button className="btn btn-size-medium btn-type-primary btn-emphasis-high">
-        primary
+        Primary
       </button>
     </div>
   </div>
   <div className="col col-auto ph-4">
     <div className="mb-4">
       <button className="btn btn-size-medium btn-type-danger btn-emphasis-low">
-        danger
+        Danger
       </button>
     </div>
     <div className="mb-4">
       <button className="btn btn-size-medium btn-type-danger btn-emphasis-medium">
-        danger
+        Danger
       </button>
     </div>
     <div className="mb-4">
       <button className="btn btn-size-medium btn-type-danger btn-emphasis-high">
-        danger
+        Danger
       </button>
     </div>
   </div>
@@ -67,12 +69,12 @@ import '../../../styles.css';
 
 ## Icon button
 
-<div className="flex flex-row -mh-4">
+<div className="flex flex-row -mh-4 mb-12">
   <div className="col col-auto ph-4">
     <div className="mb-4">
       <button className="btn btn-size-small btn-type-primary btn-emphasis-low">
         <span>Send</span>
-        <span className="btn-icon-end">
+        <span className="dib lh-none ml-2">
           <MdSend size={18} />
         </span>
       </button>
@@ -80,7 +82,7 @@ import '../../../styles.css';
     <div className="mb-4">
       <button className="btn btn-size-medium btn-type-primary btn-emphasis-medium">
         <span>Send</span>
-        <span className="btn-icon-end">
+        <span className="dib lh-none ml-2">
           <MdSend size={20} />
         </span>
       </button>
@@ -88,7 +90,7 @@ import '../../../styles.css';
     <div className="mb-4">
       <button className="btn btn-size-large btn-type-primary btn-emphasis-high">
         <span>Send</span>
-        <span className="btn-icon-end">
+        <span className="dib lh-none ml-2">
           <MdSend size={22} />
         </span>
       </button>
@@ -97,7 +99,7 @@ import '../../../styles.css';
   <div className="col col-auto ph-4">
     <div className="mb-4">
       <button className="btn btn-size-small btn-type-danger btn-emphasis-low">
-        <span className="btn-icon-start">
+        <span className="dib lh-none mr-2">
           <MdDelete size={18} />
         </span>
         <span>Delete</span>
@@ -105,7 +107,7 @@ import '../../../styles.css';
     </div>
     <div className="mb-4">
       <button className="btn btn-size-medium btn-type-danger btn-emphasis-medium">
-        <span className="btn-icon-start">
+        <span className="dib lh-none mr-2">
           <MdDelete size={20} />
         </span>
         <span>Delete</span>
@@ -113,11 +115,50 @@ import '../../../styles.css';
     </div>
     <div className="mb-4">
       <button className="btn btn-size-large btn-type-danger btn-emphasis-high">
-        <span className="btn-icon-start">
+        <span className="dib lh-none mr-2">
           <MdDelete size={22} />
         </span>
         <span>Delete</span>
       </button>
     </div>
   </div>
+  <div className="col col-auto ph-4">
+    <div className="mb-4">
+      <button className="btn btn-square btn-size-small btn-type-danger btn-emphasis-low">
+        <span className="lh-none">
+          <MdDelete size={18} />
+        </span>
+      </button>
+    </div>
+    <div className="mb-4">
+      <button className="btn btn-square btn-size-medium btn-type-danger btn-emphasis-medium">
+        <span className="lh-none">
+          <MdDelete size={20} />
+        </span>
+      </button>
+    </div>
+    <div className="mb-4">
+      <button className="btn btn-square btn-size-large btn-type-danger btn-emphasis-high">
+        <span className="lh-none">
+          <MdDelete size={22} />
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+## Full width button
+
+<div className="mb-4">
+  <button className="btn btn-size-medium btn-type-primary btn-emphasis-medium w-full">
+    Primary
+  </button>
+</div>
+<div className="mb-4">
+  <button className="btn btn-size-medium btn-type-primary btn-emphasis-medium w-full">
+    <span>Send</span>
+    <span className="dib lh-none ml-2">
+      <MdSend size={20} />
+    </span>
+  </button>
 </div>

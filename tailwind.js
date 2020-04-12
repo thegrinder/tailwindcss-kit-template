@@ -16,7 +16,8 @@ module.exports = {
       7: 700,
     },
     leading: {
-      none: 1,
+      none: 0,
+      fit: 1,
       tight: 1.25,
       normal: 1.5,
       loose: 2,
