@@ -52,7 +52,7 @@ const buttonPlugin = ({ addComponents }) => {
         ...Object.keys(buttonTypes[colorMode][type]).reduce(
           (acc, emphasis) => ({
             ...acc,
-            [`.${colorMode}-mode .btn-type-${type}.btn-emphasis-${emphasis}`]: {
+            [`.${colorMode}-mode .btn-type-${type}--${emphasis}`]: {
               ...buttonTypes[colorMode][type][emphasis].normal,
               '&:hover': buttonTypes[colorMode][type][emphasis].hover,
               '&:active': buttonTypes[colorMode][type][emphasis].active,

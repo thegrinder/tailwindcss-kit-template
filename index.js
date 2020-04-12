@@ -14,6 +14,7 @@ const lineHeight = require('./src/utilities/line-height');
 
 // components
 const button = require('./src/components/button/button');
+const text = require('./src/components/text/text');
 
 module.exports = [
   flexGrid,
@@ -29,4 +30,5 @@ module.exports = [
   verticalAlign,
   lineHeight,
   button,
+  text,
 ];
