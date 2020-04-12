@@ -1,3 +1,4 @@
+// utilities
 const flexGrid = require('./src/utilities/flex-grid');
 const spacing = require('./src/utilities/spacing');
 const borderRadius = require('./src/utilities/border-radius');
@@ -10,6 +11,9 @@ const opacity = require('./src/utilities/opacity');
 const textAlign = require('./src/utilities/text-align');
 const verticalAlign = require('./src/utilities/vertical-align');
 const lineHeight = require('./src/utilities/line-height');
+
+// components
+const button = require('./src/components/button/button');
 
 module.exports = [
   flexGrid,
@@ -24,4 +28,5 @@ module.exports = [
   textAlign,
   verticalAlign,
   lineHeight,
+  button,
 ];

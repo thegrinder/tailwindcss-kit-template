@@ -1,4 +1,4 @@
-const plugins = require('./');
+const plugins = require('.');
 
 module.exports = {
   theme: {
@@ -56,7 +56,7 @@ module.exports = {
       48: '12rem',
       64: '16rem',
       full: '100%',
-      screen: '100vh'
+      screen: '100vh',
     },
     minWidth: {
       0: '0',
@@ -65,7 +65,7 @@ module.exports = {
     minHeight: {
       0: '0',
       full: '100%',
-      screen: '100vh'
+      screen: '100vh',
     },
     maxWidth: {
       xs: '20rem',
@@ -151,4 +151,4 @@ module.exports = {
     important: false,
     separator: ':',
   },
-}
+};
