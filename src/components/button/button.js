@@ -1,3 +1,4 @@
+const { colorModes } = require('../../colors');
 const { buttonSizes, buttonTypes } = require('./theme/buttonTheme');
 
 const buttonPlugin = ({ addComponents }) => {
@@ -5,8 +6,8 @@ const buttonPlugin = ({ addComponents }) => {
     '.btn': {
       border: 'none',
       position: 'relative',
-      display: 'inline-block',
-      verticalAlign: 'middle',
+      display: 'inline-flex',
+      alignItems: 'center',
       textDecoration: 'none',
       transition: '0.2s ease-in-out',
       transitionProperty: 'color, background-color, border-color',
@@ -33,29 +34,44 @@ const buttonPlugin = ({ addComponents }) => {
     {}
   );
 
-  const btnTypeStyles = Object.keys(buttonTypes.light).reduce(
-    (classNames, type) => ({
-      ...classNames,
-      ...Object.keys(buttonTypes.light[type]).reduce(
-        (acc, emphasis) => ({
-          ...acc,
-          [`.btn-type-${type}.btn-emphasis-${emphasis}`]: {
-            ...buttonTypes.light[type][emphasis].normal,
-            '&:hover': buttonTypes.light[type][emphasis].hover,
-            '&:active': buttonTypes.light[type][emphasis].active,
-            '&:disabled': buttonTypes.light[type][emphasis].disabled,
-          },
-        }),
-        {}
-      ),
-    }),
-    {}
+  const [lightModeBtnTypes, darkModeBtnTypes] = colorModes.map((colorMode) =>
+    Object.keys(buttonTypes[colorMode]).reduce(
+      (classNames, type) => ({
+        ...classNames,
+        ...Object.keys(buttonTypes[colorMode][type]).reduce(
+          (acc, emphasis) => ({
+            ...acc,
+            [`.${colorMode}-mode .btn-type-${type}.btn-emphasis-${emphasis}`]: {
+              ...buttonTypes[colorMode][type][emphasis].normal,
+              '&:hover': buttonTypes[colorMode][type][emphasis].hover,
+              '&:active': buttonTypes[colorMode][type][emphasis].active,
+              '&:disabled': buttonTypes[colorMode][type][emphasis].disabled,
+            },
+          }),
+          {}
+        ),
+      }),
+      {}
+    )
   );
+
+  const buttonIcons = {
+    '.btn-icon-start': {
+      lineHeight: '0',
+      marginRight: '.25rem',
+    },
+    '.btn-icon-end': {
+      lineHeight: '0',
+      marginLeft: '.25rem',
+    },
+  };
 
   addComponents({
     ...btnBaseStyle,
     ...btnSizeStyles,
-    ...btnTypeStyles,
+    ...lightModeBtnTypes,
+    ...darkModeBtnTypes,
+    ...buttonIcons,
   });
 };
 

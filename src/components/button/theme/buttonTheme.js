@@ -13,12 +13,12 @@ const buttonSizes = {
     fontSize: '.875rem',
   },
   medium: {
-    padding: '0 1.75rem',
+    padding: '0 1.25rem',
     height: '2.5rem',
     fontSize: '1rem',
   },
   large: {
-    padding: '0 2.5rem',
+    padding: '0 1.5rem',
     height: '3rem',
     fontSize: '1.25rem',
   },

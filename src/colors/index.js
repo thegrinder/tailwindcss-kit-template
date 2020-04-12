@@ -121,11 +121,11 @@ const colors = {
   dark: darkTheme,
 };
 
-const modes = Object.keys(colors);
+const colorModes = Object.keys(colors);
 
 module.exports = {
   lightTheme,
   darkTheme,
   colors,
-  modes,
+  colorModes,
 };

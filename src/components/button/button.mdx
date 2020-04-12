@@ -5,10 +5,119 @@ route: /button
 
 # Button
 
+import { MdDelete, MdSend } from 'react-icons/md';
 import '../../../styles.css';
 
-<button className="btn btn-size-small">small button</button>
+## Sizes
 
-<button className="btn btn-size-medium btn-type-primary btn-emphasis-medium">
-  medium button
-</button>
+<div className="mb-4">
+  <button className="btn btn-size-small btn-type-primary btn-emphasis-medium">
+    small button
+  </button>
+</div>
+<div className="mb-4">
+  <button className="btn btn-size-medium btn-type-primary btn-emphasis-medium">
+    medium button
+  </button>
+</div>
+<div className="mb-4">
+  <button className="btn btn-size-large btn-type-primary btn-emphasis-medium">
+    large button
+  </button>
+</div>
+
+## Types and emphasis
+
+<div className="flex flex-row -mh-4">
+  <div className="col col-auto ph-4">
+    <div className="mb-4">
+      <button className="btn btn-size-medium btn-type-primary btn-emphasis-low">
+        primary
+      </button>
+    </div>
+    <div className="mb-4">
+      <button className="btn btn-size-medium btn-type-primary btn-emphasis-medium">
+        primary
+      </button>
+    </div>
+    <div className="mb-4">
+      <button className="btn btn-size-medium btn-type-primary btn-emphasis-high">
+        primary
+      </button>
+    </div>
+  </div>
+  <div className="col col-auto ph-4">
+    <div className="mb-4">
+      <button className="btn btn-size-medium btn-type-danger btn-emphasis-low">
+        danger
+      </button>
+    </div>
+    <div className="mb-4">
+      <button className="btn btn-size-medium btn-type-danger btn-emphasis-medium">
+        danger
+      </button>
+    </div>
+    <div className="mb-4">
+      <button className="btn btn-size-medium btn-type-danger btn-emphasis-high">
+        danger
+      </button>
+    </div>
+  </div>
+</div>
+
+## Icon button
+
+<div className="flex flex-row -mh-4">
+  <div className="col col-auto ph-4">
+    <div className="mb-4">
+      <button className="btn btn-size-small btn-type-primary btn-emphasis-low">
+        <span>Send</span>
+        <span className="btn-icon-end">
+          <MdSend size={18} />
+        </span>
+      </button>
+    </div>
+    <div className="mb-4">
+      <button className="btn btn-size-medium btn-type-primary btn-emphasis-medium">
+        <span>Send</span>
+        <span className="btn-icon-end">
+          <MdSend size={20} />
+        </span>
+      </button>
+    </div>
+    <div className="mb-4">
+      <button className="btn btn-size-large btn-type-primary btn-emphasis-high">
+        <span>Send</span>
+        <span className="btn-icon-end">
+          <MdSend size={22} />
+        </span>
+      </button>
+    </div>
+  </div>
+  <div className="col col-auto ph-4">
+    <div className="mb-4">
+      <button className="btn btn-size-small btn-type-danger btn-emphasis-low">
+        <span className="btn-icon-start">
+          <MdDelete size={18} />
+        </span>
+        <span>Delete</span>
+      </button>
+    </div>
+    <div className="mb-4">
+      <button className="btn btn-size-medium btn-type-danger btn-emphasis-medium">
+        <span className="btn-icon-start">
+          <MdDelete size={20} />
+        </span>
+        <span>Delete</span>
+      </button>
+    </div>
+    <div className="mb-4">
+      <button className="btn btn-size-large btn-type-danger btn-emphasis-high">
+        <span className="btn-icon-start">
+          <MdDelete size={22} />
+        </span>
+        <span>Delete</span>
+      </button>
+    </div>
+  </div>
+</div>
