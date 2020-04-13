@@ -19,7 +19,7 @@ const buttonDarkTheme = {
     },
     medium: {
       normal: {
-        color: darkTheme.primary600,
+        color: darkTheme.primary500,
         backgroundColor: darkTheme.primary50,
       },
       hover: {
@@ -27,29 +27,29 @@ const buttonDarkTheme = {
         backgroundColor: darkTheme.primary100,
       },
       active: {
-        color: darkTheme.primary800,
+        color: darkTheme.primary900,
         backgroundColor: darkTheme.primary200,
       },
       disabled: {
-        color: darkTheme.neutral500,
-        backgroundColor: darkTheme.neutral200,
+        color: darkTheme.neutral0,
+        backgroundColor: darkTheme.neutral400,
       },
     },
     low: {
       normal: {
-        color: darkTheme.primary600,
+        color: darkTheme.primary500,
       },
       hover: {
         color: darkTheme.primary700,
         backgroundColor: darkTheme.primary50,
       },
       active: {
-        color: darkTheme.primary800,
+        color: darkTheme.primary900,
         backgroundColor: darkTheme.primary100,
       },
       disabled: {
-        color: darkTheme.neutral500,
-        backgroundColor: darkTheme.neutral200,
+        color: darkTheme.neutral0,
+        backgroundColor: darkTheme.neutral400,
       },
     },
   },
@@ -71,11 +71,11 @@ const buttonDarkTheme = {
     },
     medium: {
       normal: {
-        color: darkTheme.danger700,
+        color: darkTheme.danger500,
         backgroundColor: darkTheme.danger50,
       },
       hover: {
-        color: darkTheme.danger800,
+        color: darkTheme.danger700,
         backgroundColor: darkTheme.danger100,
       },
       active: {
@@ -83,16 +83,16 @@ const buttonDarkTheme = {
         backgroundColor: darkTheme.danger200,
       },
       disabled: {
-        color: darkTheme.neutral500,
-        backgroundColor: darkTheme.neutral200,
+        color: darkTheme.neutral0,
+        backgroundColor: darkTheme.neutral400,
       },
     },
     low: {
       normal: {
-        color: darkTheme.danger700,
+        color: darkTheme.danger500,
       },
       hover: {
-        color: darkTheme.danger800,
+        color: darkTheme.danger700,
         backgroundColor: darkTheme.danger50,
       },
       active: {
@@ -100,8 +100,8 @@ const buttonDarkTheme = {
         backgroundColor: darkTheme.danger100,
       },
       disabled: {
-        color: darkTheme.neutral500,
-        backgroundColor: darkTheme.neutral100,
+        color: darkTheme.neutral0,
+        backgroundColor: darkTheme.neutral400,
       },
     },
   },

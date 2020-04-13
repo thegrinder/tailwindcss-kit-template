@@ -14,7 +14,7 @@ const buttonLightTheme = {
         backgroundColor: lightTheme.primary700,
       },
       disabled: {
-        backgroundColor: lightTheme.neutral300,
+        backgroundColor: lightTheme.neutral400,
       },
     },
     medium: {
@@ -31,8 +31,8 @@ const buttonLightTheme = {
         backgroundColor: lightTheme.primary200,
       },
       disabled: {
-        color: lightTheme.neutral300,
-        backgroundColor: lightTheme.neutral100,
+        color: lightTheme.neutral0,
+        backgroundColor: lightTheme.neutral400,
       },
     },
     low: {
@@ -48,8 +48,8 @@ const buttonLightTheme = {
         backgroundColor: lightTheme.primary100,
       },
       disabled: {
-        color: lightTheme.neutral300,
-        backgroundColor: lightTheme.neutral50,
+        color: lightTheme.neutral0,
+        backgroundColor: lightTheme.neutral400,
       },
     },
   },
@@ -66,7 +66,7 @@ const buttonLightTheme = {
         backgroundColor: lightTheme.danger700,
       },
       disabled: {
-        backgroundColor: lightTheme.neutral300,
+        backgroundColor: lightTheme.neutral400,
       },
     },
     medium: {
@@ -83,8 +83,8 @@ const buttonLightTheme = {
         backgroundColor: lightTheme.danger200,
       },
       disabled: {
-        color: lightTheme.neutral300,
-        backgroundColor: lightTheme.neutral100,
+        color: lightTheme.neutral0,
+        backgroundColor: lightTheme.neutral400,
       },
     },
     low: {
@@ -100,8 +100,8 @@ const buttonLightTheme = {
         backgroundColor: lightTheme.danger100,
       },
       disabled: {
-        color: lightTheme.neutral300,
-        backgroundColor: lightTheme.neutral50,
+        color: lightTheme.neutral0,
+        backgroundColor: lightTheme.neutral400,
       },
     },
   },
