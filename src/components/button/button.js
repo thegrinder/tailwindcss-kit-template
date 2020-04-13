@@ -37,7 +37,7 @@ const buttonPlugin = ({ addComponents }) => {
   const squareBtnSizeStyles = Object.keys(buttonSizes).reduce(
     (acc, next) => ({
       ...acc,
-      [`.btn-square.btn-size-${next}`]: {
+      [`.btn-square-size-${next}`]: {
         width: buttonSizes[next].height,
         height: buttonSizes[next].height,
       },

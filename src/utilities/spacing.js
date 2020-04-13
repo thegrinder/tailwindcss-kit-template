@@ -32,8 +32,11 @@ const spacingPlugin = ({ addUtilities, config }) => {
         marginRight: `-${spacingConfig[spacingKey]}`,
         marginLeft: `-${spacingConfig[spacingKey]}`,
       },
-      [`.-mb-${spacingKey}`]: {
-        marginBottom: `-${spacingConfig[spacingKey]}`,
+      [`.-mr-${spacingKey}`]: {
+        marginRight: `-${spacingConfig[spacingKey]}`,
+      },
+      [`.-ml-${spacingKey}`]: {
+        marginLeft: `-${spacingConfig[spacingKey]}`,
       },
     })
   );
