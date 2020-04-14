@@ -18,6 +18,13 @@ module.exports = {
     grid: {
       columns: 12,
     },
+    inset: {
+      0: '0',
+      1: '0.25rem',
+      2: '0.5rem',
+      3: '0.75rem',
+      4: '1rem',
+    },
     screens: {
       sm: '576px',
       md: '768px',
@@ -70,6 +77,7 @@ module.exports = {
     fontSize: ['responsive'],
     fontStyle: [],
     height: [],
+    inset: [],
     justifyContent: [],
     letterSpacing: [],
     lineHeight: [],
@@ -95,6 +103,7 @@ module.exports = {
     'fontStyle',
     'fontSize',
     'height',
+    'inset',
     'justifyContent',
     'letterSpacing',
     'lineHeight',
