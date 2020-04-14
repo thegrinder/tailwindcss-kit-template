@@ -1,4 +1,4 @@
-const { colorModes } = require('../../colors');
+const { mapThemeToClasses } = require('../../helpers');
 const { buttonSizes, buttonTypes } = require('./theme/buttonTheme');
 
 const buttonPlugin = ({ addComponents }) => {
@@ -45,25 +45,16 @@ const buttonPlugin = ({ addComponents }) => {
     {}
   );
 
-  const [lightModeBtnTypes, darkModeBtnTypes] = colorModes.map((colorMode) =>
-    Object.keys(buttonTypes[colorMode]).reduce(
-      (classNames, type) => ({
-        ...classNames,
-        ...Object.keys(buttonTypes[colorMode][type]).reduce(
-          (acc, emphasis) => ({
-            ...acc,
-            [`.${colorMode}-mode .btn-type-${type}--${emphasis}`]: {
-              ...buttonTypes[colorMode][type][emphasis].normal,
-              '&:hover': buttonTypes[colorMode][type][emphasis].hover,
-              '&:active': buttonTypes[colorMode][type][emphasis].active,
-              '&:disabled': buttonTypes[colorMode][type][emphasis].disabled,
-            },
-          }),
-          {}
-        ),
-      }),
-      {}
-    )
+  const [lightModeBtnTypes, darkModeBtnTypes] = mapThemeToClasses(
+    buttonTypes,
+    (colorMode, type, emphasis) => ({
+      [`.${colorMode}-mode .btn-type-${type}--${emphasis}`]: {
+        ...buttonTypes[colorMode][type][emphasis].normal,
+        '&:hover': buttonTypes[colorMode][type][emphasis].hover,
+        '&:active': buttonTypes[colorMode][type][emphasis].active,
+        '&:disabled': buttonTypes[colorMode][type][emphasis].disabled,
+      },
+    })
   );
 
   addComponents({
