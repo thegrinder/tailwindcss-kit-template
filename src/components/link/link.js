@@ -1,5 +1,5 @@
 const { colorModes } = require('../../colors');
-const { linkTypes } = require('./theme/linkTheme');
+const { linkVariants } = require('./theme/linkTheme');
 
 const buttonPlugin = ({ addComponents }) => {
   const linkBaseStyle = {
@@ -21,23 +21,24 @@ const buttonPlugin = ({ addComponents }) => {
     },
   };
 
-  const [lightModeLinkTypes, darkModeLinkTypes] = colorModes.map((colorMode) =>
-    Object.keys(linkTypes[colorMode]).reduce(
-      (acc, linkType) => ({
-        ...acc,
-        [`.${colorMode}-mode .link-type-${linkType}`]: {
-          ...linkTypes[colorMode][linkType].normal,
-          '&:hover': linkTypes[colorMode][linkType].hover,
-        },
-      }),
-      {}
-    )
+  const [lightModeLinkVariants, darkModeLinkVariants] = colorModes.map(
+    (colorMode) =>
+      Object.keys(linkVariants[colorMode]).reduce(
+        (acc, variant) => ({
+          ...acc,
+          [`.${colorMode}-mode .link-variant-${variant}`]: {
+            ...linkVariants[colorMode][variant].normal,
+            '&:hover': linkVariants[colorMode][variant].hover,
+          },
+        }),
+        {}
+      )
   );
 
   addComponents({
     ...linkBaseStyle,
-    ...lightModeLinkTypes,
-    ...darkModeLinkTypes,
+    ...lightModeLinkVariants,
+    ...darkModeLinkVariants,
   });
 };
 

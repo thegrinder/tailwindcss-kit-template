@@ -1,5 +1,5 @@
 const { mapThemeToClasses } = require('../../helpers');
-const { buttonSizes, buttonTypes } = require('./theme/buttonTheme');
+const { buttonSizes, buttonVariants } = require('./theme/buttonTheme');
 
 const buttonPlugin = ({ addComponents }) => {
   const btnBaseStyle = {
@@ -45,14 +45,14 @@ const buttonPlugin = ({ addComponents }) => {
     {}
   );
 
-  const [lightModeBtnTypes, darkModeBtnTypes] = mapThemeToClasses(
-    buttonTypes,
-    (colorMode, type, emphasis) => ({
-      [`.${colorMode}-mode .btn-type-${type}--${emphasis}`]: {
-        ...buttonTypes[colorMode][type][emphasis].normal,
-        '&:hover': buttonTypes[colorMode][type][emphasis].hover,
-        '&:active': buttonTypes[colorMode][type][emphasis].active,
-        '&:disabled': buttonTypes[colorMode][type][emphasis].disabled,
+  const [lightModeBtnVariants, darkModeBtnVariants] = mapThemeToClasses(
+    buttonVariants,
+    (colorMode, variant, emphasis) => ({
+      [`.${colorMode}-mode .btn-variant-${variant}--${emphasis}`]: {
+        ...buttonVariants[colorMode][variant][emphasis].normal,
+        '&:hover': buttonVariants[colorMode][variant][emphasis].hover,
+        '&:active': buttonVariants[colorMode][variant][emphasis].active,
+        '&:disabled': buttonVariants[colorMode][variant][emphasis].disabled,
       },
     })
   );
@@ -61,8 +61,8 @@ const buttonPlugin = ({ addComponents }) => {
     ...btnBaseStyle,
     ...btnSizeStyles,
     ...squareBtnSizeStyles,
-    ...lightModeBtnTypes,
-    ...darkModeBtnTypes,
+    ...lightModeBtnVariants,
+    ...darkModeBtnVariants,
   });
 };
 

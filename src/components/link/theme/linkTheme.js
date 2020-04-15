@@ -1,11 +1,11 @@
 const linkLightTheme = require('./linkLightTheme');
 const linkDarkTheme = require('./linkDarkTheme');
 
-const linkTypes = {
+const linkVariants = {
   dark: linkDarkTheme,
   light: linkLightTheme,
 };
 
 module.exports = {
-  linkTypes,
+  linkVariants,
 };

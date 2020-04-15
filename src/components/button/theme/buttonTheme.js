@@ -1,7 +1,7 @@
 const buttonLightTheme = require('./buttonLightTheme');
 const buttonDarkTheme = require('./buttonDarkTheme');
 
-const buttonTypes = {
+const buttonVariants = {
   dark: buttonDarkTheme,
   light: buttonLightTheme,
 };
@@ -25,6 +25,6 @@ const buttonSizes = {
 };
 
 module.exports = {
-  buttonTypes,
+  buttonVariants,
   buttonSizes,
 };
