@@ -12,6 +12,7 @@ const textAlign = require('./src/utilities/text-align');
 const button = require('./src/components/button/button');
 const text = require('./src/components/text/text');
 const heading = require('./src/components/heading/heading');
+const link = require('./src/components/link/link');
 
 module.exports = {
   theme: {
@@ -128,6 +129,7 @@ module.exports = {
     button,
     text,
     heading,
+    link,
   ],
   options: {
     prefix: '',
