@@ -6,25 +6,27 @@ route: components/link
 
 # Link
 
-## Sizes
-
-<div className="mb-12">
-  <p className="link link-variant-default text-xl db">Default</p>
-  <p className="link link-variant-default text-lg db">Default</p>
-  <p className="link link-variant-default text-base db">Default</p>
-  <p className="link link-variant-default text-sm db">Default</p>
-  <p className="link link-variant-default text-xs db">Default</p>
-</div>
+import { Playground } from 'docz';
+import { useColorMode } from 'theme-ui';
 
 ## Types
 
-<div className="mb-4">
-  <a className="link link-variant-default" href="#">
-    default
-  </a>
-</div>
-<div className="mb-4">
-  <a className="link link-variant-muted" href="#">
-    muted
-  </a>
-</div>
+<Playground>
+  {() => {
+    const [colorMode] = useColorMode();
+    return (
+      <>
+        <div className="mb-4">
+          <a className={`link ${colorMode}:link-variant-default`} href="#">
+            default
+          </a>
+        </div>
+        <div className="mb-4">
+          <a className={`link ${colorMode}:link-variant-muted`} href="#">
+            muted
+          </a>
+        </div>
+      </>
+    );
+  }}
+</Playground>

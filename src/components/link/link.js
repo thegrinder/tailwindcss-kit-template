@@ -1,7 +1,7 @@
 const { colorModes } = require('../../colors');
 const { linkVariants } = require('./theme/linkTheme');
 
-const buttonPlugin = ({ addComponents }) => {
+const buttonPlugin = ({ addComponents, e }) => {
   const linkBaseStyle = {
     '.link': {
       fontFamily: `'Inter var', sans-serif`,
@@ -26,7 +26,7 @@ const buttonPlugin = ({ addComponents }) => {
       Object.keys(linkVariants[colorMode]).reduce(
         (acc, variant) => ({
           ...acc,
-          [`.${colorMode}-mode .link-variant-${variant}`]: {
+          [`.${e(`${colorMode}:link-variant-${variant}`)}`]: {
             ...linkVariants[colorMode][variant].normal,
             '&:hover': linkVariants[colorMode][variant].hover,
           },

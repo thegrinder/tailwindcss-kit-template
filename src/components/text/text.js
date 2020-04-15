@@ -1,11 +1,11 @@
 const { mapThemeToClasses } = require('../../helpers');
 const { textColors } = require('./theme/textTheme');
 
-const textPlugin = ({ addComponents }) => {
+const textPlugin = ({ addComponents, e }) => {
   const [lightModeTextColors, darkModeTextColors] = mapThemeToClasses(
     textColors,
     (colorMode, color, emphasis) => ({
-      [`.${colorMode}-mode .text-color-${color}--${emphasis}`]: {
+      [`.${e(`${colorMode}:text-color-${color}--${emphasis}`)}`]: {
         color: textColors[colorMode][color][emphasis],
       },
     })

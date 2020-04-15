@@ -6,39 +6,28 @@ route: components/heading
 
 # Heading
 
-## Sizes
-
-<div className="mb-12">
-  <h1 className="heading-color-neutral--high text-6xl">
-    The spectacle before us was sublime.
-  </h1>
-  <h2 className="heading-color-neutral--high text-5xl">
-    The spectacle before us was sublime.
-  </h2>
-  <h3 className="heading-color-neutral--high text-4xl">
-    The spectacle before us was sublime.
-  </h3>
-  <h4 className="heading-color-neutral--high text-3xl">
-    The spectacle before us was sublime.
-  </h4>
-  <h5 className="heading-color-neutral--high text-2xl">
-    The spectacle before us was sublime.
-  </h5>
-  <h6 className="heading-color-neutral--high text-xl">
-    The spectacle before us was sublime.
-  </h6>
-</div>
+import { Playground } from 'docz';
+import { useColorMode } from 'theme-ui';
 
 ## Emphasis
 
-<div className="mb-12">
-  <h5 className="heading-color-neutral--high text-xl">
-    The spectacle before us was sublime.
-  </h5>
-  <h5 className="heading-color-neutral--medium text-xl">
-    The spectacle before us was sublime.
-  </h5>
-  <h5 className="heading-color-neutral--low text-xl">
-    The spectacle before us was sublime.
-  </h5>
-</div>
+<Playground>
+  {() => {
+    const [colorMode] = useColorMode();
+    return (
+      <>
+        <div className="mb-12">
+          <h5 className={`${colorMode}:heading-color-neutral--high text-xl`}>
+            The spectacle before us was sublime.
+          </h5>
+          <h5 className={`${colorMode}:heading-color-neutral--medium text-xl`}>
+            The spectacle before us was sublime.
+          </h5>
+          <h5 className={`${colorMode}:heading-color-neutral--low text-xl`}>
+            The spectacle before us was sublime.
+          </h5>
+        </div>
+      </>
+    );
+  }}
+</Playground>

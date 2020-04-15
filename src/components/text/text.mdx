@@ -6,56 +6,57 @@ route: components/text
 
 # Text
 
-## Sizes
-
-<div className="mb-12">
-  <p className="text-color-neutral--high text-xl">
-    The spectacle before us was sublime.
-  </p>
-  <p className="text-color-neutral--high text-lg">
-    The spectacle before us was sublime.
-  </p>
-  <p className="text-color-neutral--high text-base">
-    The spectacle before us was sublime.
-  </p>
-  <p className="text-color-neutral--high text-sm">
-    The spectacle before us was sublime.
-  </p>
-  <p className="text-color-neutral--high text-xs">
-    The spectacle before us was sublime.
-  </p>
-</div>
+import { Playground } from 'docz';
+import { useColorMode } from 'theme-ui';
 
 ## Colors
 
-<div className="mb-12">
-  <p className="text-color-neutral--high text-base">
-    The spectacle before us was sublime.
-  </p>
-  <p className="text-color-primary--high text-base">
-    The spectacle before us was sublime.
-  </p>
-  <p className="text-color-success--high text-base">
-    The spectacle before us was sublime.
-  </p>
-  <p className="text-color-warning--high text-base">
-    The spectacle before us was sublime.
-  </p>
-  <p className="text-color-danger--high text-base">
-    The spectacle before us was sublime.
-  </p>
-</div>
+<Playground>
+  {() => {
+    const [colorMode] = useColorMode();
+    return (
+      <>
+        <div className="mb-12">
+          <p className={`${colorMode}:text-color-neutral--high text-base`}>
+            The spectacle before us was sublime.
+          </p>
+          <p className={`${colorMode}:text-color-primary--high text-base`}>
+            The spectacle before us was sublime.
+          </p>
+          <p className={`${colorMode}:text-color-success--high text-base`}>
+            The spectacle before us was sublime.
+          </p>
+          <p className={`${colorMode}:text-color-warning--high text-base`}>
+            The spectacle before us was sublime.
+          </p>
+          <p className={`${colorMode}:text-color-danger--high text-base`}>
+            The spectacle before us was sublime.
+          </p>
+        </div>
+      </>
+    );
+  }}
+</Playground>
 
 ## Emphasis
 
-<div className="mb-12">
-  <p className="text-color-neutral--high text-base">
-    The spectacle before us was sublime.
-  </p>
-  <p className="text-color-neutral--medium text-base">
-    The spectacle before us was sublime.
-  </p>
-  <p className="text-color-neutral--low text-base">
-    The spectacle before us was sublime.
-  </p>
-</div>
+<Playground>
+  {() => {
+    const [colorMode] = useColorMode();
+    return (
+      <>
+        <div className="mb-12">
+          <p className={`${colorMode}:text-color-neutral--high text-base`}>
+            The spectacle before us was sublime.
+          </p>
+          <p className={`${colorMode}:text-color-neutral--medium text-base`}>
+            The spectacle before us was sublime.
+          </p>
+          <p className={`${colorMode}:text-color-neutral--low text-base`}>
+            The spectacle before us was sublime.
+          </p>
+        </div>
+      </>
+    );
+  }}
+</Playground>

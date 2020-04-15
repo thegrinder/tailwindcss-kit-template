@@ -116,14 +116,19 @@ const darkTheme = {
   danger900: 'hsl(0, 100%, 95%)',
 };
 
+const darkModeKey = 'dark';
+const lightModeKey = 'light';
+
 const colors = {
-  light: lightTheme,
-  dark: darkTheme,
+  [lightModeKey]: lightTheme,
+  [darkModeKey]: darkTheme,
 };
 
-const colorModes = Object.keys(colors);
+const colorModes = [lightModeKey, darkModeKey];
 
 module.exports = {
+  darkModeKey,
+  lightModeKey,
   lightTheme,
   darkTheme,
   colors,

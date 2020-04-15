@@ -1,7 +1,7 @@
 const { mapThemeToClasses } = require('../../helpers');
 const { buttonSizes, buttonVariants } = require('./theme/buttonTheme');
 
-const buttonPlugin = ({ addComponents }) => {
+const buttonPlugin = ({ addComponents, e }) => {
   const btnBaseStyle = {
     '.btn': {
       position: 'relative',
@@ -48,7 +48,7 @@ const buttonPlugin = ({ addComponents }) => {
   const [lightModeBtnVariants, darkModeBtnVariants] = mapThemeToClasses(
     buttonVariants,
     (colorMode, variant, emphasis) => ({
-      [`.${colorMode}-mode .btn-variant-${variant}--${emphasis}`]: {
+      [`.${e(`${colorMode}:btn-variant-${variant}--${emphasis}`)}`]: {
         ...buttonVariants[colorMode][variant][emphasis].normal,
         '&:hover': buttonVariants[colorMode][variant][emphasis].hover,
         '&:active': buttonVariants[colorMode][variant][emphasis].active,
