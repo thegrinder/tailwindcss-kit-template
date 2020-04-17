@@ -4,104 +4,104 @@ const buttonLightTheme = {
   primary: {
     high: {
       normal: {
-        color: lightTheme.neutral0,
-        backgroundColor: lightTheme.primary500,
+        color: lightTheme.neutral[0],
+        backgroundColor: lightTheme.primary[500],
       },
       hover: {
-        backgroundColor: lightTheme.primary600,
+        backgroundColor: lightTheme.primary[600],
       },
       active: {
-        backgroundColor: lightTheme.primary700,
+        backgroundColor: lightTheme.primary[700],
       },
       disabled: {
-        backgroundColor: lightTheme.neutral400,
+        backgroundColor: lightTheme.neutral[400],
       },
     },
     medium: {
       normal: {
-        color: lightTheme.primary500,
-        backgroundColor: lightTheme.primary50,
+        color: lightTheme.primary[500],
+        backgroundColor: lightTheme.primary[50],
       },
       hover: {
-        color: lightTheme.primary700,
-        backgroundColor: lightTheme.primary100,
+        color: lightTheme.primary[700],
+        backgroundColor: lightTheme.primary[100],
       },
       active: {
-        color: lightTheme.primary900,
-        backgroundColor: lightTheme.primary200,
+        color: lightTheme.primary[900],
+        backgroundColor: lightTheme.primary[200],
       },
       disabled: {
-        color: lightTheme.neutral0,
-        backgroundColor: lightTheme.neutral400,
+        color: lightTheme.neutral[0],
+        backgroundColor: lightTheme.neutral[400],
       },
     },
     low: {
       normal: {
-        color: lightTheme.primary500,
+        color: lightTheme.primary[500],
       },
       hover: {
-        color: lightTheme.primary700,
-        backgroundColor: lightTheme.primary50,
+        color: lightTheme.primary[700],
+        backgroundColor: lightTheme.primary[50],
       },
       active: {
-        color: lightTheme.primary900,
-        backgroundColor: lightTheme.primary100,
+        color: lightTheme.primary[900],
+        backgroundColor: lightTheme.primary[100],
       },
       disabled: {
-        color: lightTheme.neutral0,
-        backgroundColor: lightTheme.neutral400,
+        color: lightTheme.neutral[0],
+        backgroundColor: lightTheme.neutral[400],
       },
     },
   },
   danger: {
     high: {
       normal: {
-        color: lightTheme.neutral0,
-        backgroundColor: lightTheme.danger500,
+        color: lightTheme.neutral[0],
+        backgroundColor: lightTheme.danger[500],
       },
       hover: {
-        backgroundColor: lightTheme.danger600,
+        backgroundColor: lightTheme.danger[600],
       },
       active: {
-        backgroundColor: lightTheme.danger700,
+        backgroundColor: lightTheme.danger[700],
       },
       disabled: {
-        backgroundColor: lightTheme.neutral400,
+        backgroundColor: lightTheme.neutral[400],
       },
     },
     medium: {
       normal: {
-        color: lightTheme.danger500,
-        backgroundColor: lightTheme.danger50,
+        color: lightTheme.danger[500],
+        backgroundColor: lightTheme.danger[50],
       },
       hover: {
-        color: lightTheme.danger700,
-        backgroundColor: lightTheme.danger100,
+        color: lightTheme.danger[700],
+        backgroundColor: lightTheme.danger[100],
       },
       active: {
-        color: lightTheme.danger900,
-        backgroundColor: lightTheme.danger200,
+        color: lightTheme.danger[900],
+        backgroundColor: lightTheme.danger[200],
       },
       disabled: {
-        color: lightTheme.neutral0,
-        backgroundColor: lightTheme.neutral400,
+        color: lightTheme.neutral[0],
+        backgroundColor: lightTheme.neutral[400],
       },
     },
     low: {
       normal: {
-        color: lightTheme.danger500,
+        color: lightTheme.danger[500],
       },
       hover: {
-        color: lightTheme.danger700,
-        backgroundColor: lightTheme.danger50,
+        color: lightTheme.danger[700],
+        backgroundColor: lightTheme.danger[50],
       },
       active: {
-        color: lightTheme.danger900,
-        backgroundColor: lightTheme.danger100,
+        color: lightTheme.danger[900],
+        backgroundColor: lightTheme.danger[100],
       },
       disabled: {
-        color: lightTheme.neutral0,
-        backgroundColor: lightTheme.neutral400,
+        color: lightTheme.neutral[0],
+        backgroundColor: lightTheme.neutral[400],
       },
     },
   },

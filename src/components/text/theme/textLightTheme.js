@@ -2,21 +2,21 @@ const { lightTheme } = require('../../../colors');
 
 const textLightTheme = {
   neutral: {
-    high: lightTheme.neutral1000,
-    medium: lightTheme.neutral800,
-    low: lightTheme.neutral600,
+    high: lightTheme.neutral[1000],
+    medium: lightTheme.neutral[800],
+    low: lightTheme.neutral[600],
   },
   primary: {
-    high: lightTheme.primary500,
+    high: lightTheme.primary[500],
   },
   success: {
-    high: lightTheme.success500,
+    high: lightTheme.success[500],
   },
   warning: {
     high: lightTheme.warning700,
   },
   danger: {
-    high: lightTheme.danger500,
+    high: lightTheme.danger[500],
   },
 };
 
