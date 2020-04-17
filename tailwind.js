@@ -7,6 +7,7 @@ const custom = require('./src/utilities/custom');
 const display = require('./src/utilities/display');
 const fontWeight = require('./src/utilities/font-weight');
 const textAlign = require('./src/utilities/text-align');
+const backgroundColor = require('./src/utilities/background-color/background-color');
 
 // components
 const button = require('./src/components/button/button');
@@ -118,6 +119,7 @@ module.exports = {
     'zIndex',
   ],
   plugins: [
+    backgroundColor,
     borderRadius,
     flexGrid,
     spacing,

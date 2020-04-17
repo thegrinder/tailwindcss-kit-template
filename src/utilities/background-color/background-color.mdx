@@ -1,0 +1,22 @@
+---
+name: Background color
+menu: Utilities
+route: utilities/background-color
+---
+
+import { Playground } from 'docz';
+import { useColorMode } from 'theme-ui';
+import { colors } from '../../colors';
+
+<Playground>
+  {() => {
+    const [colorMode] = useColorMode();
+    return Object.keys(colors[colorMode]).map((variant) => (
+      <div className="flex mb-4">
+        {Object.keys(colors[colorMode][variant]).map((num) => (
+          <div className={`${colorMode}:bg-${variant}-${num} h-16 w-16`} />
+        ))}
+      </div>
+    ));
+  }}
+</Playground>

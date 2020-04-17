@@ -2,7 +2,7 @@ const { darkTheme } = require('../../../colors');
 
 const textDarkTheme = {
   neutral: {
-    high: darkTheme.neutral[1000],
+    high: darkTheme.neutral[900],
     medium: darkTheme.neutral[800],
     low: darkTheme.neutral[700],
   },
