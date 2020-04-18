@@ -21,7 +21,7 @@ const buttonPlugin = ({ addComponents, e }) => {
     },
   };
 
-  const [lightModeLink, darkModeLink] = mapNestedThemeToClasses(
+  const linkModes = mapNestedThemeToClasses(
     linkVariants,
     (colorMode, variant) => ({
       [`.${e(`${colorMode}:link-variant-${variant}`)}`]: {
@@ -33,8 +33,7 @@ const buttonPlugin = ({ addComponents, e }) => {
 
   addComponents({
     ...linkBase,
-    ...lightModeLink,
-    ...darkModeLink,
+    ...linkModes,
   });
 };
 

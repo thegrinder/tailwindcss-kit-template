@@ -2,7 +2,7 @@ const { mapNestedThemeToClasses } = require('../../helpers');
 const { colors } = require('../../colors');
 
 const backgroundColorPlugin = ({ addUtilities, e }) => {
-  const [lightModeBgColors, darkModeBgColors] = mapNestedThemeToClasses(
+  const backgroundColorModes = mapNestedThemeToClasses(
     colors,
     (colorMode, variant, num) => ({
       [`.${e(`${colorMode}:bg-${variant}-${num}`)}`]: {
@@ -11,10 +11,7 @@ const backgroundColorPlugin = ({ addUtilities, e }) => {
     })
   );
 
-  addUtilities({
-    ...lightModeBgColors,
-    ...darkModeBgColors,
-  });
+  addUtilities(backgroundColorModes);
 };
 
 module.exports = backgroundColorPlugin;

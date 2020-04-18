@@ -14,7 +14,7 @@ const buttonPlugin = ({ addComponents, e }) => {
     },
   };
 
-  const btnSize = Object.keys(buttonSizes).reduce(
+  const btnSizes = Object.keys(buttonSizes).reduce(
     (acc, next) => ({
       ...acc,
       [`.btn-size-${next}`]: buttonSizes[next],
@@ -22,7 +22,7 @@ const buttonPlugin = ({ addComponents, e }) => {
     {}
   );
 
-  const squareBtnSize = Object.keys(buttonSizes).reduce(
+  const squareBtnSizes = Object.keys(buttonSizes).reduce(
     (acc, next) => ({
       ...acc,
       [`.btn-square-size-${next}`]: {
@@ -33,7 +33,7 @@ const buttonPlugin = ({ addComponents, e }) => {
     {}
   );
 
-  const [lightModeBtn, darkModeBtn] = mapNestedThemeToClasses(
+  const btnModes = mapNestedThemeToClasses(
     buttonVariants,
     (colorMode, variant, emphasis) => ({
       [`.${e(`${colorMode}:btn-variant-${variant}--${emphasis}`)}`]: {
@@ -47,10 +47,9 @@ const buttonPlugin = ({ addComponents, e }) => {
 
   addComponents({
     ...btnBase,
-    ...btnSize,
-    ...squareBtnSize,
-    ...lightModeBtn,
-    ...darkModeBtn,
+    ...btnSizes,
+    ...squareBtnSizes,
+    ...btnModes,
   });
 };
 

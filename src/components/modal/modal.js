@@ -57,7 +57,7 @@ const customPlugin = ({ addComponents, e }) => {
     },
   };
 
-  const modalState = {
+  const modalStates = {
     '.modal-opened, .overlay-opened': {
       opacity: '1',
     },
@@ -66,7 +66,7 @@ const customPlugin = ({ addComponents, e }) => {
     },
   };
 
-  const [lightModeModal, darkModeModal] = mapNestedThemeToClasses(
+  const modalModes = mapNestedThemeToClasses(
     modalTheme,
     (colorMode, variant, element) => ({
       [`.${e(`${colorMode}:${element}-${variant}`)}`]: modalTheme[colorMode][
@@ -82,9 +82,8 @@ const customPlugin = ({ addComponents, e }) => {
     ...overlayBase,
     ...defaultOverlay,
     ...fullScreenOverlay,
-    ...modalState,
-    ...lightModeModal,
-    ...darkModeModal,
+    ...modalStates,
+    ...modalModes,
   });
 };
 

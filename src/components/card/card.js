@@ -8,7 +8,7 @@ const cardPlugin = ({ addComponents, e }) => {
     },
   };
 
-  const [lightModeCard, darkModeCard] = mapFlatThemeToClasses(
+  const cardModes = mapFlatThemeToClasses(
     cardElevations,
     (colorMode, elevation) => ({
       [`.${e(`${colorMode}:card-elevation-${elevation}`)}`]: cardElevations[
@@ -19,8 +19,7 @@ const cardPlugin = ({ addComponents, e }) => {
 
   addComponents({
     ...cardBase,
-    ...lightModeCard,
-    ...darkModeCard,
+    ...cardModes,
   });
 };
 
