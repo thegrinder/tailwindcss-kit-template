@@ -2,7 +2,7 @@ const { mapNestedThemeToClasses } = require('../../helpers');
 const { linkVariants } = require('./theme/linkTheme');
 
 const buttonPlugin = ({ addComponents, e }) => {
-  const linkBaseStyle = {
+  const linkBase = {
     '.link': {
       fontFamily: `'Inter var', sans-serif`,
       backgroundColor: 'transparent',
@@ -21,7 +21,7 @@ const buttonPlugin = ({ addComponents, e }) => {
     },
   };
 
-  const [lightModeLinkVariants, darkModeLinkVariants] = mapNestedThemeToClasses(
+  const [lightModeLink, darkModeLink] = mapNestedThemeToClasses(
     linkVariants,
     (colorMode, variant) => ({
       [`.${e(`${colorMode}:link-variant-${variant}`)}`]: {
@@ -32,9 +32,9 @@ const buttonPlugin = ({ addComponents, e }) => {
   );
 
   addComponents({
-    ...linkBaseStyle,
-    ...lightModeLinkVariants,
-    ...darkModeLinkVariants,
+    ...linkBase,
+    ...lightModeLink,
+    ...darkModeLink,
   });
 };
 

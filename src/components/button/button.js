@@ -2,7 +2,7 @@ const { mapNestedThemeToClasses } = require('../../helpers');
 const { buttonSizes, buttonVariants } = require('./theme/buttonTheme');
 
 const buttonPlugin = ({ addComponents, e }) => {
-  const btnBaseStyle = {
+  const btnBase = {
     '.btn': {
       transition: '0.2s ease-in-out',
       transitionProperty: 'color, background-color, border-color',
@@ -14,7 +14,7 @@ const buttonPlugin = ({ addComponents, e }) => {
     },
   };
 
-  const btnSizeStyles = Object.keys(buttonSizes).reduce(
+  const btnSize = Object.keys(buttonSizes).reduce(
     (acc, next) => ({
       ...acc,
       [`.btn-size-${next}`]: buttonSizes[next],
@@ -22,7 +22,7 @@ const buttonPlugin = ({ addComponents, e }) => {
     {}
   );
 
-  const squareBtnSizeStyles = Object.keys(buttonSizes).reduce(
+  const squareBtnSize = Object.keys(buttonSizes).reduce(
     (acc, next) => ({
       ...acc,
       [`.btn-square-size-${next}`]: {
@@ -33,7 +33,7 @@ const buttonPlugin = ({ addComponents, e }) => {
     {}
   );
 
-  const [lightModeBtnVariants, darkModeBtnVariants] = mapNestedThemeToClasses(
+  const [lightModeBtn, darkModeBtn] = mapNestedThemeToClasses(
     buttonVariants,
     (colorMode, variant, emphasis) => ({
       [`.${e(`${colorMode}:btn-variant-${variant}--${emphasis}`)}`]: {
@@ -46,11 +46,11 @@ const buttonPlugin = ({ addComponents, e }) => {
   );
 
   addComponents({
-    ...btnBaseStyle,
-    ...btnSizeStyles,
-    ...squareBtnSizeStyles,
-    ...lightModeBtnVariants,
-    ...darkModeBtnVariants,
+    ...btnBase,
+    ...btnSize,
+    ...squareBtnSize,
+    ...lightModeBtn,
+    ...darkModeBtn,
   });
 };
 
