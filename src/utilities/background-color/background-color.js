@@ -1,8 +1,8 @@
-const { mapThemeToClasses } = require('../../helpers');
+const { mapNestedThemeToClasses } = require('../../helpers');
 const { colors } = require('../../colors');
 
 const backgroundColorPlugin = ({ addUtilities, e }) => {
-  const [lightModeBgColors, darkModeBgColors] = mapThemeToClasses(
+  const [lightModeBgColors, darkModeBgColors] = mapNestedThemeToClasses(
     colors,
     (colorMode, variant, num) => ({
       [`.${e(`${colorMode}:bg-${variant}-${num}`)}`]: {

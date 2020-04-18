@@ -1,4 +1,4 @@
-const { colorModes } = require('../../colors');
+const { mapFlatThemeToClasses } = require('../../helpers');
 const { cardElevations } = require('./theme/cardTheme');
 
 const cardPlugin = ({ addComponents, e }) => {
@@ -8,18 +8,14 @@ const cardPlugin = ({ addComponents, e }) => {
     },
   };
 
-  const [lightModeCardElevations, darkModeCardElevations] = colorModes.map(
-    (colorMode) =>
-      Object.keys(cardElevations[colorMode]).reduce(
-        (acc, elevation) => ({
-          ...acc,
-          [`.${e(`${colorMode}:card-elevation-${elevation}`)}`]: cardElevations[
-            colorMode
-          ][elevation],
-        }),
-        {}
-      )
-  );
+  const [
+    lightModeCardElevations,
+    darkModeCardElevations,
+  ] = mapFlatThemeToClasses(cardElevations, (colorMode, elevation) => ({
+    [`.${e(`${colorMode}:card-elevation-${elevation}`)}`]: cardElevations[
+      colorMode
+    ][elevation],
+  }));
 
   addComponents({
     ...cardBaseStyle,

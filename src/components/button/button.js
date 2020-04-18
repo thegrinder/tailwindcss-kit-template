@@ -1,4 +1,4 @@
-const { mapThemeToClasses } = require('../../helpers');
+const { mapNestedThemeToClasses } = require('../../helpers');
 const { buttonSizes, buttonVariants } = require('./theme/buttonTheme');
 
 const buttonPlugin = ({ addComponents, e }) => {
@@ -33,7 +33,7 @@ const buttonPlugin = ({ addComponents, e }) => {
     {}
   );
 
-  const [lightModeBtnVariants, darkModeBtnVariants] = mapThemeToClasses(
+  const [lightModeBtnVariants, darkModeBtnVariants] = mapNestedThemeToClasses(
     buttonVariants,
     (colorMode, variant, emphasis) => ({
       [`.${e(`${colorMode}:btn-variant-${variant}--${emphasis}`)}`]: {

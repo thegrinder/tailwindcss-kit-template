@@ -1,4 +1,4 @@
-const { colorModes } = require('../../colors');
+const { mapNestedThemeToClasses } = require('../../helpers');
 const { linkVariants } = require('./theme/linkTheme');
 
 const buttonPlugin = ({ addComponents, e }) => {
@@ -21,18 +21,14 @@ const buttonPlugin = ({ addComponents, e }) => {
     },
   };
 
-  const [lightModeLinkVariants, darkModeLinkVariants] = colorModes.map(
-    (colorMode) =>
-      Object.keys(linkVariants[colorMode]).reduce(
-        (acc, variant) => ({
-          ...acc,
-          [`.${e(`${colorMode}:link-variant-${variant}`)}`]: {
-            ...linkVariants[colorMode][variant].normal,
-            '&:hover': linkVariants[colorMode][variant].hover,
-          },
-        }),
-        {}
-      )
+  const [lightModeLinkVariants, darkModeLinkVariants] = mapNestedThemeToClasses(
+    linkVariants,
+    (colorMode, variant) => ({
+      [`.${e(`${colorMode}:link-variant-${variant}`)}`]: {
+        ...linkVariants[colorMode][variant].normal,
+        '&:hover': linkVariants[colorMode][variant].hover,
+      },
+    })
   );
 
   addComponents({
