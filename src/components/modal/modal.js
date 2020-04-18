@@ -1,10 +1,12 @@
-const customPlugin = ({ addComponents }) => {
+const { mapNestedThemeToClasses } = require('../../helpers');
+const { modalTheme } = require('./theme/modalTheme');
+
+const customPlugin = ({ addComponents, e }) => {
   const modalBase = {
-    '.modal-default, .modal-full-screen': {
+    '.modal': {
       outline: 'none',
       position: 'absolute',
-      backgroundColor: '#fff',
-      borderRadius: '.5rem',
+      backgroundColor: 'hsl(0, 0%, 100%)',
       transition: 'opacity .3s',
       opacity: '0',
     },
@@ -12,13 +14,14 @@ const customPlugin = ({ addComponents }) => {
 
   const defaultModal = {
     '.modal-default': {
+      borderRadius: '.5rem',
       maxWidth: '20rem',
       width: '100%',
     },
   };
 
-  const fullScreenModal = {
-    '.modal-full-screen': {
+  const screenModal = {
+    '.modal-screen': {
       top: '0',
       bottom: '0',
       left: '0',
@@ -27,7 +30,7 @@ const customPlugin = ({ addComponents }) => {
   };
 
   const overlayBase = {
-    '.modal-overlay-default, .modal-overlay-full-screen': {
+    '.overlay': {
       transition: 'opacity .3s',
       position: 'fixed',
       zIndex: '10',
@@ -40,8 +43,8 @@ const customPlugin = ({ addComponents }) => {
   };
 
   const defaultOverlay = {
-    '.modal-overlay-default': {
-      background: 'rgba(0,0,0,0.5)',
+    '.overlay-default': {
+      background: 'hsla(0, 0%, 0%, 0.5)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -49,28 +52,39 @@ const customPlugin = ({ addComponents }) => {
   };
 
   const fullScreenOverlay = {
-    '.modal-overlay-full-screen': {
-      background: '#fff',
+    '.overlay-screen': {
+      background: 'hsl(0, 0%, 100%)',
     },
   };
 
   const modalState = {
-    '.modal-opened, .modal-overlay-opened': {
+    '.modal-opened, .overlay-opened': {
       opacity: '1',
     },
-    '.modal-closed, .modal-overlay-closed': {
+    '.modal-closed, .overlay-closed': {
       opacity: '0',
     },
   };
 
+  const [lightModeModal, darkModeModal] = mapNestedThemeToClasses(
+    modalTheme,
+    (colorMode, variant, element) => ({
+      [`.${e(`${colorMode}:${element}-${variant}`)}`]: modalTheme[colorMode][
+        variant
+      ][element],
+    })
+  );
+
   addComponents({
     ...modalBase,
     ...defaultModal,
-    ...fullScreenModal,
+    ...screenModal,
     ...overlayBase,
     ...defaultOverlay,
     ...fullScreenOverlay,
     ...modalState,
+    ...lightModeModal,
+    ...darkModeModal,
   });
 };
 

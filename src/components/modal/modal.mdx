@@ -7,6 +7,7 @@ route: components/modal
 # Modal
 
 import { useState } from 'react';
+import { useColorMode } from 'theme-ui';
 import { Playground } from 'docz';
 import ReactModal from 'react-modal';
 
@@ -14,29 +15,30 @@ import ReactModal from 'react-modal';
 
 <Playground>
   {() => {
+    const [colorMode] = useColorMode();
     const modalClassNames = {
       default: {
         className: {
-          base: 'modal-default',
+          base: `modal modal-default ${colorMode}:modal-default`,
           beforeClose: 'modal-closed',
           afterOpen: 'modal-opened',
         },
         overlayClassName: {
-          base: 'modal-overlay-default',
-          beforeClose: 'modal-overlay-closed',
-          afterOpen: 'modal-overlay-opened',
+          base: `overlay overlay-default ${colorMode}:overlay-default`,
+          beforeClose: 'overlay-closed',
+          afterOpen: 'overlay-opened',
         },
       },
-      fullScreen: {
+      screen: {
         className: {
-          base: 'modal-full-screen',
+          base: `modal modal-screen ${colorMode}:modal-screen`,
           beforeClose: 'modal-closed',
           afterOpen: 'modal-opened',
         },
         overlayClassName: {
-          base: 'modal-overlay-full-screen',
-          beforeClose: 'modal-overlay-closed',
-          afterOpen: 'modal-overlay-opened',
+          base: `overlay overlay-screen ${colorMode}:overlay-screen`,
+          beforeClose: 'overlay-closed',
+          afterOpen: 'overlay-opened',
         },
       },
     };
@@ -58,7 +60,7 @@ import ReactModal from 'react-modal';
       return (
         <div className="mb-4">
           <button
-            className="btn btn-size-md light:btn-variant-primary--high"
+            className={`btn btn-size-md ${colorMode}:btn-variant-primary--high`}
             onClick={openModal}
           >
             open default modal
@@ -66,7 +68,7 @@ import ReactModal from 'react-modal';
           <Modal type="default" isOpen={isOpen} onRequestClose={closeModal}>
             <div className="pa-8">
               <button
-                className="btn btn-size-md light:btn-variant-primary--high"
+                className={`btn btn-size-md ${colorMode}:btn-variant-primary--high`}
                 onClick={closeModal}
               >
                 Close modal
@@ -76,22 +78,22 @@ import ReactModal from 'react-modal';
         </div>
       );
     };
-    const FullScreenModal = () => {
+    const ScreenModal = () => {
       const [isOpen, toggleModal] = useState(false);
       const openModal = () => toggleModal(true);
       const closeModal = () => toggleModal(false);
       return (
         <div>
           <button
-            className="btn btn-size-md light:btn-variant-primary--high"
+            className={`btn btn-size-md ${colorMode}:btn-variant-primary--high`}
             onClick={openModal}
           >
             open full screen modal
           </button>
-          <Modal type="fullScreen" isOpen={isOpen} onRequestClose={closeModal}>
+          <Modal type="screen" isOpen={isOpen} onRequestClose={closeModal}>
             <div className="pa-8">
               <button
-                className="btn btn-size-md light:btn-variant-primary--high"
+                className={`btn btn-size-md ${colorMode}:btn-variant-primary--high`}
                 onClick={closeModal}
               >
                 Close modal
@@ -104,7 +106,7 @@ import ReactModal from 'react-modal';
     return (
       <>
         <DefaultModal />
-        <FullScreenModal />
+        <ScreenModal />
       </>
     );
   }}
