@@ -4,25 +4,13 @@ const { buttonSizes, buttonVariants } = require('./theme/buttonTheme');
 const buttonPlugin = ({ addComponents, e }) => {
   const btnBaseStyle = {
     '.btn': {
-      position: 'relative',
-      display: 'inline-flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      textDecoration: 'none',
       transition: '0.2s ease-in-out',
       transitionProperty: 'color, background-color, border-color',
-      cursor: 'pointer',
-      outline: 'none',
       borderWidth: '1px',
       borderStyle: 'solid',
-      borderColor: 'transparent',
-      backgroundColor: 'transparent',
       borderRadius: '.5rem',
       fontWeight: '600',
       fontFamily: `'Inter var', sans-serif`,
-      '&:disabled': {
-        cursor: 'default',
-      },
     },
   };
 

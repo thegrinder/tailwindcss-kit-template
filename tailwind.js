@@ -1,3 +1,6 @@
+// base
+const base = require('./src/base/base');
+
 // utilities
 const flexGrid = require('./src/utilities/flex-grid');
 const spacing = require('./src/utilities/spacing');
@@ -119,6 +122,7 @@ module.exports = {
   ],
   plugins: [
     backgroundColor,
+    base,
     border,
     borderRadius,
     button,
