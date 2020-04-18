@@ -1,0 +1,24 @@
+---
+name: Text color
+menu: Utilities
+route: utilities/text-color
+---
+
+import { Playground } from 'docz';
+import { useColorMode } from 'theme-ui';
+import { colors } from '../../colors';
+
+<Playground>
+  {() => {
+    const [colorMode] = useColorMode();
+    return Object.keys(colors[colorMode]).map((variant) => (
+      <div className="mb-12">
+        {Object.keys(colors[colorMode][variant]).map((num) => (
+          <p className={`${colorMode}:text-${variant}-${num}`}>
+            The spectacle before us was sublime.
+          </p>
+        ))}
+      </div>
+    ));
+  }}
+</Playground>

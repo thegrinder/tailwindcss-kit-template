@@ -8,11 +8,10 @@ const display = require('./src/utilities/display');
 const fontWeight = require('./src/utilities/font-weight');
 const textAlign = require('./src/utilities/text-align');
 const backgroundColor = require('./src/utilities/background-color/background-color');
+const textColor = require('./src/utilities/text-color/text-color');
 
 // components
 const button = require('./src/components/button/button');
-const text = require('./src/components/text/text');
-const heading = require('./src/components/heading/heading');
 const link = require('./src/components/link/link');
 
 module.exports = {
@@ -102,8 +101,8 @@ module.exports = {
     'flexGrow',
     'flexShrink',
     'flexWrap',
-    'fontStyle',
     'fontSize',
+    'fontStyle',
     'height',
     'inset',
     'justifyContent',
@@ -120,18 +119,17 @@ module.exports = {
   ],
   plugins: [
     backgroundColor,
-    borderRadius,
-    flexGrid,
-    spacing,
     border,
+    borderRadius,
+    button,
     custom,
     display,
+    flexGrid,
     fontWeight,
-    textAlign,
-    button,
-    text,
-    heading,
     link,
+    spacing,
+    textAlign,
+    textColor,
   ],
   options: {
     prefix: '',
