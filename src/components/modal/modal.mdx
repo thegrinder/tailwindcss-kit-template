@@ -1,0 +1,111 @@
+---
+name: Modal
+menu: Components
+route: components/modal
+---
+
+# Modal
+
+import { useState } from 'react';
+import { Playground } from 'docz';
+import ReactModal from 'react-modal';
+
+## Variants
+
+<Playground>
+  {() => {
+    const modalClassNames = {
+      default: {
+        className: {
+          base: 'modal-default',
+          beforeClose: 'modal-closed',
+          afterOpen: 'modal-opened',
+        },
+        overlayClassName: {
+          base: 'modal-overlay-default',
+          beforeClose: 'modal-overlay-closed',
+          afterOpen: 'modal-overlay-opened',
+        },
+      },
+      fullScreen: {
+        className: {
+          base: 'modal-full-screen',
+          beforeClose: 'modal-closed',
+          afterOpen: 'modal-opened',
+        },
+        overlayClassName: {
+          base: 'modal-overlay-full-screen',
+          beforeClose: 'modal-overlay-closed',
+          afterOpen: 'modal-overlay-opened',
+        },
+      },
+    };
+    const Modal = ({ type, isOpen, onRequestClose, children }) => (
+      <ReactModal
+        closeTimeoutMS={300}
+        isOpen={isOpen}
+        onRequestClose={onRequestClose}
+        className={modalClassNames[type].className}
+        overlayClassName={modalClassNames[type].overlayClassName}
+      >
+        {children}
+      </ReactModal>
+    );
+    const DefaultModal = () => {
+      const [isOpen, toggleModal] = useState(false);
+      const openModal = () => toggleModal(true);
+      const closeModal = () => toggleModal(false);
+      return (
+        <div className="mb-4">
+          <button
+            className="btn btn-size-md light:btn-variant-primary--high"
+            onClick={openModal}
+          >
+            open default modal
+          </button>
+          <Modal type="default" isOpen={isOpen} onRequestClose={closeModal}>
+            <div className="pa-8">
+              <button
+                className="btn btn-size-md light:btn-variant-primary--high"
+                onClick={closeModal}
+              >
+                Close modal
+              </button>
+            </div>
+          </Modal>
+        </div>
+      );
+    };
+    const FullScreenModal = () => {
+      const [isOpen, toggleModal] = useState(false);
+      const openModal = () => toggleModal(true);
+      const closeModal = () => toggleModal(false);
+      return (
+        <div>
+          <button
+            className="btn btn-size-md light:btn-variant-primary--high"
+            onClick={openModal}
+          >
+            open full screen modal
+          </button>
+          <Modal type="fullScreen" isOpen={isOpen} onRequestClose={closeModal}>
+            <div className="pa-8">
+              <button
+                className="btn btn-size-md light:btn-variant-primary--high"
+                onClick={closeModal}
+              >
+                Close modal
+              </button>
+            </div>
+          </Modal>
+        </div>
+      );
+    };
+    return (
+      <>
+        <DefaultModal />
+        <FullScreenModal />
+      </>
+    );
+  }}
+</Playground>

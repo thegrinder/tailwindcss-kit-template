@@ -17,6 +17,7 @@ const textColor = require('./src/utilities/text-color/text-color');
 const button = require('./src/components/button/button');
 const link = require('./src/components/link/link');
 const card = require('./src/components/card/card');
+const modal = require('./src/components/modal/modal');
 
 module.exports = {
   theme: {
@@ -133,6 +134,7 @@ module.exports = {
     flexGrid,
     fontWeight,
     link,
+    modal,
     spacing,
     textAlign,
     textColor,
