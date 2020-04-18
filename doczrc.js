@@ -4,7 +4,7 @@ module.exports = {
       modes: {
         dark: {
           playground: {
-            bg: 'hsl(210, 24%, 14%)',
+            bg: 'hsl(210, 12%, 7%)',
           },
         },
       },

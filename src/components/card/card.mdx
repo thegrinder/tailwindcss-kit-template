@@ -1,0 +1,28 @@
+---
+name: Card
+menu: Components
+route: components/card
+---
+
+# Card
+
+import { Playground } from 'docz';
+import { useColorMode } from 'theme-ui';
+
+## Elevation
+
+<Playground>
+  {() => {
+    const [colorMode] = useColorMode();
+    return (
+      <>
+        <div className={`card ${colorMode}:card-elevation-1 pa-8 mb-4`}>
+          Elevation 1
+        </div>
+        <div className={`card ${colorMode}:card-elevation-2 pa-8`}>
+          Elevation 2
+        </div>
+      </>
+    );
+  }}
+</Playground>

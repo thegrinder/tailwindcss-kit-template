@@ -16,6 +16,7 @@ const textColor = require('./src/utilities/text-color/text-color');
 // components
 const button = require('./src/components/button/button');
 const link = require('./src/components/link/link');
+const card = require('./src/components/card/card');
 
 module.exports = {
   theme: {
@@ -126,6 +127,7 @@ module.exports = {
     border,
     borderRadius,
     button,
+    card,
     custom,
     display,
     flexGrid,
