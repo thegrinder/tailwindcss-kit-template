@@ -7,6 +7,8 @@ const Button = ({
   variant = 'primary',
   emphasis = 'medium',
   square = false,
+  loading = false,
+  disabled = false,
   className,
   children,
   iconStart,
@@ -22,11 +24,19 @@ const Button = ({
         square ? `btn-square-size-${size}` : `btn-size-${size}`,
         className
       )}
+      disabled={loading || disabled}
       {...rest}
     >
-      {iconStart && <span className="dib leading-0 mr-2">{iconStart}</span>}
-      {square ? <span className="leading-0">{children}</span> : children}
-      {iconEnd && <span className="dib leading-0 ml-2">{iconEnd}</span>}
+      {loading && (
+        <span className="absolute-fill flex items-center justify-center">
+          <span className={`spinner spinner-size-${size}`} />
+        </span>
+      )}
+      <span className={loading ? 'opacity-0' : 'opacity-100'}>
+        {iconStart && <span className="dib leading-0 mr-2">{iconStart}</span>}
+        {square ? <span className="leading-0">{children}</span> : children}
+        {iconEnd && <span className="dib leading-0 ml-2">{iconEnd}</span>}
+      </span>
     </button>
   );
 };

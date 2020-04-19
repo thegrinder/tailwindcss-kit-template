@@ -3,10 +3,10 @@ const spinnerSizes = {
     size: '1rem',
   },
   md: {
-    size: '1.5rem',
+    size: '1.25rem',
   },
   lg: {
-    size: '2rem',
+    size: '1.5rem',
   },
 };
 
