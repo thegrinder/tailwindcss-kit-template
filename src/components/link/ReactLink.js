@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { useColorMode } from 'theme-ui';
 
 const Link = ({ variant = 'primary', className, children, ...rest }) => {

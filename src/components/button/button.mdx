@@ -7,262 +7,204 @@ route: components/button
 # Button
 
 import { Playground } from 'docz';
-import { useColorMode } from 'theme-ui';
 import { MdDelete, MdSend } from 'react-icons/md';
 import Button from './ReactButton';
 
 ```jsx
+import React from 'react';
+import classNames from 'classnames';
+import { useColorMode } from 'theme-ui';
+
 const Button = ({
   size = 'md',
   variant = 'primary',
   emphasis = 'medium',
-  colorMode = 'light',
   square = false,
+  className,
   children,
   iconStart,
   iconEnd,
   ...rest
-}) => (
-  <button
-    className={classNames(
-      'btn',
-      `${colorMode}:btn-variant-${variant}--${emphasis}`,
-      square ? `btn-square-size-${size}` : `btn-size-${size}`
-    )}
-    {...rest}
-  >
-    {iconStart && <span className="dib leading-0 mr-2">{iconStart}</span>}
-    {square ? <span className="leading-0">{children}</span> : children}
-    {iconEnd && <span className="dib leading-0 ml-2">{iconEnd}</span>}
-  </button>
-);
+}) => {
+  const [colorMode] = useColorMode();
+  return (
+    <button
+      className={classNames(
+        'btn',
+        `${colorMode}:btn-variant-${variant}--${emphasis}`,
+        square ? `btn-square-size-${size}` : `btn-size-${size}`,
+        className
+      )}
+      {...rest}
+    >
+      {iconStart && <span className="dib leading-0 mr-2">{iconStart}</span>}
+      {square ? <span className="leading-0">{children}</span> : children}
+      {iconEnd && <span className="dib leading-0 ml-2">{iconEnd}</span>}
+    </button>
+  );
+};
 ```
 
 ## Sizes
 
 <Playground>
-  {() => {
-    const [colorMode] = useColorMode();
-    return (
-      <div className="mb-12">
-        <div className="mb-4">
-          <Button colorMode={colorMode} size="sm">
-            Small
-          </Button>
-        </div>
-        <div className="mb-4">
-          <Button colorMode={colorMode} size="md">
-            Medium
-          </Button>
-        </div>
-        <div className="mb-4">
-          <Button colorMode={colorMode} size="lg">
-            Large
-          </Button>
-        </div>
-      </div>
-    );
-  }}
+  <div className="mb-12">
+    <div className="mb-4">
+      <Button size="sm">Small</Button>
+    </div>
+    <div className="mb-4">
+      <Button size="md">Medium</Button>
+    </div>
+    <div className="mb-4">
+      <Button size="lg">Large</Button>
+    </div>
+  </div>
 </Playground>
 
 ## Variants and emphasis
 
 <Playground>
-  {() => {
-    const [colorMode] = useColorMode();
-    return (
-      <div className="flex flex-row -mh-4 mb-12">
-        <div className="col col-auto ph-4">
-          <div className="mb-4">
-            <Button colorMode={colorMode} variant="primary" emphasis="low">
-              Primary
-            </Button>
-          </div>
-          <div className="mb-4">
-            <Button colorMode={colorMode} variant="primary" emphasis="medium">
-              Primary
-            </Button>
-          </div>
-          <div className="mb-4">
-            <Button colorMode={colorMode} variant="primary" emphasis="high">
-              Primary
-            </Button>
-          </div>
-          <div className="mb-4">
-            <Button
-              colorMode={colorMode}
-              disabled
-              variant="primary"
-              emphasis="high"
-            >
-              Disabled
-            </Button>
-          </div>
-        </div>
-        <div className="col col-auto ph-4">
-          <div className="mb-4">
-            <Button colorMode={colorMode} variant="danger" emphasis="low">
-              Danger
-            </Button>
-          </div>
-          <div className="mb-4">
-            <Button colorMode={colorMode} variant="danger" emphasis="medium">
-              Danger
-            </Button>
-          </div>
-          <div className="mb-4">
-            <Button colorMode={colorMode} variant="danger" emphasis="high">
-              Danger
-            </Button>
-          </div>
-          <div className="mb-4">
-            <Button
-              colorMode={colorMode}
-              disabled
-              variant="danger"
-              emphasis="high"
-            >
-              Disabled
-            </Button>
-          </div>
-        </div>
+  <div className="flex flex-row -mh-4 mb-12">
+    <div className="col col-auto ph-4">
+      <div className="mb-4">
+        <Button variant="primary" emphasis="low">
+          Primary
+        </Button>
       </div>
-    );
-  }}
+      <div className="mb-4">
+        <Button variant="primary" emphasis="medium">
+          Primary
+        </Button>
+      </div>
+      <div className="mb-4">
+        <Button variant="primary" emphasis="high">
+          Primary
+        </Button>
+      </div>
+      <div className="mb-4">
+        <Button disabled variant="primary" emphasis="high">
+          Disabled
+        </Button>
+      </div>
+    </div>
+    <div className="col col-auto ph-4">
+      <div className="mb-4">
+        <Button variant="danger" emphasis="low">
+          Danger
+        </Button>
+      </div>
+      <div className="mb-4">
+        <Button variant="danger" emphasis="medium">
+          Danger
+        </Button>
+      </div>
+      <div className="mb-4">
+        <Button variant="danger" emphasis="high">
+          Danger
+        </Button>
+      </div>
+      <div className="mb-4">
+        <Button disabled variant="danger" emphasis="high">
+          Disabled
+        </Button>
+      </div>
+    </div>
+  </div>
 </Playground>
 
 ## Icon button
 
 <Playground>
-  {() => {
-    const [colorMode] = useColorMode();
-    return (
-      <div className="flex flex-row -mh-4 mb-12">
-        <div className="col col-auto ph-4">
-          <div className="mb-4">
-            <Button
-              colorMode={colorMode}
-              size="sm"
-              variant="primary"
-              emphasis="low"
-              iconEnd={<MdSend size={18} />}
-            >
-              Send
-            </Button>
-          </div>
-          <div className="mb-4">
-            <Button
-              colorMode={colorMode}
-              size="md"
-              variant="primary"
-              emphasis="medium"
-              iconEnd={<MdSend size={18} />}
-            >
-              Send
-            </Button>
-          </div>
-          <div className="mb-4">
-            <Button
-              colorMode={colorMode}
-              size="lg"
-              variant="primary"
-              emphasis="high"
-              iconEnd={<MdSend size={18} />}
-            >
-              Send
-            </Button>
-          </div>
-        </div>
-        <div className="col col-auto ph-4">
-          <div className="mb-4">
-            <Button
-              colorMode={colorMode}
-              size="sm"
-              variant="danger"
-              emphasis="low"
-              iconStart={<MdDelete size={18} />}
-            >
-              Delete
-            </Button>
-          </div>
-          <div className="mb-4">
-            <Button
-              colorMode={colorMode}
-              size="md"
-              variant="danger"
-              emphasis="medium"
-              iconStart={<MdDelete size={20} />}
-            >
-              Delete
-            </Button>
-          </div>
-          <div className="mb-4">
-            <Button
-              colorMode={colorMode}
-              size="lg"
-              variant="danger"
-              emphasis="high"
-              iconStart={<MdDelete size={22} />}
-            >
-              Delete
-            </Button>
-          </div>
-        </div>
-        <div className="col col-auto ph-4">
-          <div className="mb-4">
-            <Button
-              colorMode={colorMode}
-              size="sm"
-              variant="danger"
-              emphasis="low"
-              square
-            >
-              <MdDelete size={18} />
-            </Button>
-          </div>
-          <div className="mb-4">
-            <Button
-              colorMode={colorMode}
-              size="md"
-              variant="danger"
-              emphasis="medium"
-              square
-            >
-              <MdDelete size={20} />
-            </Button>
-          </div>
-          <div className="mb-4">
-            <Button
-              colorMode={colorMode}
-              size="lg"
-              variant="danger"
-              emphasis="high"
-              square
-            >
-              <MdDelete size={22} />
-            </Button>
-          </div>
-        </div>
+  <div className="flex flex-row -mh-4 mb-12">
+    <div className="col col-auto ph-4">
+      <div className="mb-4">
+        <Button
+          size="sm"
+          variant="primary"
+          emphasis="low"
+          iconEnd={<MdSend size={18} />}
+        >
+          Send
+        </Button>
       </div>
-    );
-  }}
+      <div className="mb-4">
+        <Button
+          size="md"
+          variant="primary"
+          emphasis="medium"
+          iconEnd={<MdSend size={18} />}
+        >
+          Send
+        </Button>
+      </div>
+      <div className="mb-4">
+        <Button
+          size="lg"
+          variant="primary"
+          emphasis="high"
+          iconEnd={<MdSend size={18} />}
+        >
+          Send
+        </Button>
+      </div>
+    </div>
+    <div className="col col-auto ph-4">
+      <div className="mb-4">
+        <Button
+          size="sm"
+          variant="danger"
+          emphasis="low"
+          iconStart={<MdDelete size={18} />}
+        >
+          Delete
+        </Button>
+      </div>
+      <div className="mb-4">
+        <Button
+          size="md"
+          variant="danger"
+          emphasis="medium"
+          iconStart={<MdDelete size={20} />}
+        >
+          Delete
+        </Button>
+      </div>
+      <div className="mb-4">
+        <Button
+          size="lg"
+          variant="danger"
+          emphasis="high"
+          iconStart={<MdDelete size={22} />}
+        >
+          Delete
+        </Button>
+      </div>
+    </div>
+    <div className="col col-auto ph-4">
+      <div className="mb-4">
+        <Button size="sm" variant="danger" emphasis="low" square>
+          <MdDelete size={18} />
+        </Button>
+      </div>
+      <div className="mb-4">
+        <Button size="md" variant="danger" emphasis="medium" square>
+          <MdDelete size={20} />
+        </Button>
+      </div>
+      <div className="mb-4">
+        <Button size="lg" variant="danger" emphasis="high" square>
+          <MdDelete size={22} />
+        </Button>
+      </div>
+    </div>
+  </div>
 </Playground>
 
 ## Full width button
 
 <Playground>
-  {() => {
-    const [colorMode] = useColorMode();
-    return (
-      <>
-        <Button colorMode={colorMode} className="w-full mb-4">
-          Primary
-        </Button>
-        <Button colorMode={colorMode} iconEnd={<MdSend size={20} />} className="w-full">
-          Send 
-        </Button>
-      </>
-    );
-}}
-
+  <Button className="w-full mb-4">Primary</Button>
+  <Button iconEnd={<MdSend size={20} />} className="w-full">
+    Send
+  </Button>
 </Playground>

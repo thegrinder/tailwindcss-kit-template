@@ -7,44 +7,37 @@ route: components/card
 # Card
 
 import { Playground } from 'docz';
-import { useColorMode } from 'theme-ui';
 import Card from './ReactCard';
 
 ```jsx
-const Card = ({
-  colorMode = 'light',
-  elevation = 1,
-  className,
-  children,
-  ...rest
-}) => (
-  <div
-    className={classNames(
-      'card',
-      `${colorMode}:card-elevation-${elevation}`,
-      className
-    )}
-    {...rest}
-  >
-    {children}
-  </div>
-);
+import React from 'react';
+import classNames from 'classnames';
+import { useColorMode } from 'theme-ui';
+
+const Card = ({ elevation = 1, className, children, ...rest }) => {
+  const [colorMode] = useColorMode();
+  return (
+    <div
+      className={classNames(
+        'card',
+        `${colorMode}:card-elevation-${elevation}`,
+        className
+      )}
+      {...rest}
+    >
+      {children}
+    </div>
+  );
+};
 ```
 
 ## Elevation
 
 <Playground>
-  {() => {
-    const [colorMode] = useColorMode();
-    return (
-      <>
-        <Card colorMode={colorMode} elevation={1} className="pa-8 mb-4">
-          Elevation 1
-        </Card>
-        <Card colorMode={colorMode} elevation={2} className="pa-8 mb-4">
-          Elevation 2
-        </Card>
-      </>
-    );
-  }}
+  <Card elevation={1} className="pa-8 mb-4">
+    Elevation 1
+  </Card>
+  <Card elevation={2} className="pa-8 mb-4">
+    Elevation 2
+  </Card>
 </Playground>
