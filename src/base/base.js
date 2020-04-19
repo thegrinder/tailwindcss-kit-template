@@ -26,7 +26,6 @@ const basePlugin = ({ addBase, config }) => {
       boxSizing: 'border-box',
     },
     'h1, h2, h3, h4, h5, h6': {
-      fontFamily: `'Inter var', sans-serif`,
       fontWeight: 600,
     },
     h1: {
@@ -47,8 +46,7 @@ const basePlugin = ({ addBase, config }) => {
     h6: {
       fontSize: config('theme.fontSize.base'),
     },
-    'p, span, label, li': {
-      fontFamily: `'Inter var', sans-serif`,
+    'p, label, li': {
       fontSize: config('theme.fontSize.base'),
     },
     'ol, ul': {

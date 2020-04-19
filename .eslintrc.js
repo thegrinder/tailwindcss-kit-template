@@ -4,7 +4,7 @@ module.exports = {
     commonjs: true,
     es6: true,
   },
-  extends: ['airbnb-base', 'prettier'],
+  extends: ['plugin:react/recommended', 'airbnb-base', 'prettier'],
   plugins: ['prettier'],
   globals: {
     Atomics: 'readonly',
@@ -17,6 +17,7 @@ module.exports = {
     },
   },
   rules: {
+    'react/prop-types': 'off',
     'prettier/prettier': [
       'error',
       {
