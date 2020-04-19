@@ -1,5 +1,5 @@
 const { mapNestedThemeToClasses } = require('../../helpers');
-const { modalTheme } = require('./theme/modalTheme');
+const { modalTheme } = require('./theme/modal-theme');
 
 const customPlugin = ({ addComponents, e }) => {
   const modalBase = {

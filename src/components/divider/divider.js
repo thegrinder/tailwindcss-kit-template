@@ -1,5 +1,5 @@
 const { lightModeKey, darkModeKey } = require('../../colors');
-const { dividerTheme } = require('./theme/dividerTheme');
+const { dividerTheme } = require('./theme/divider-theme');
 
 const dividerPlugin = ({ addComponents, e }) => {
   const dividerBase = {

@@ -1,6 +1,6 @@
 const { lightModeKey, darkModeKey } = require('../../../colors');
-const modalDarkTheme = require('./modalDarkTheme');
-const modalLightTheme = require('./modalLightTheme');
+const modalDarkTheme = require('./modal-dark-theme');
+const modalLightTheme = require('./modal-light-theme');
 
 const modalTheme = {
   [darkModeKey]: modalDarkTheme,

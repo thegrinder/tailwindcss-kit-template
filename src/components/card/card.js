@@ -1,5 +1,5 @@
 const { mapFlatThemeToClasses } = require('../../helpers');
-const { cardElevations } = require('./theme/cardTheme');
+const { cardElevations } = require('./theme/card-theme');
 
 const cardPlugin = ({ addComponents, e }) => {
   const cardBase = {

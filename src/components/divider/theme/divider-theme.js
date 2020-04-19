@@ -1,6 +1,6 @@
 const { lightModeKey, darkModeKey } = require('../../../colors');
-const dividerLightTheme = require('./dividerLightTheme');
-const dividerDarkTheme = require('./dividerDarkTheme');
+const dividerLightTheme = require('./divider-light-theme');
+const dividerDarkTheme = require('./divider-dark-theme');
 
 const dividerTheme = {
   [darkModeKey]: dividerDarkTheme,

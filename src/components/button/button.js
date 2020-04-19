@@ -1,5 +1,5 @@
 const { mapNestedThemeToClasses } = require('../../helpers');
-const { buttonSizes, buttonVariants } = require('./theme/buttonTheme');
+const { buttonSizes, buttonVariants } = require('./theme/button-theme');
 
 const buttonPlugin = ({ addComponents, e }) => {
   const btnBase = {

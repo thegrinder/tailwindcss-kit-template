@@ -1,4 +1,4 @@
-const { spinnerSizes } = require('./theme/spinnerTheme');
+const { spinnerSizes } = require('./theme/spinner-theme');
 
 const spinnerPlugin = ({ addComponents }) => {
   const spinnerBase = {

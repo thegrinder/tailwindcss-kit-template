@@ -1,5 +1,5 @@
 const { mapNestedThemeToClasses } = require('../../helpers');
-const { linkVariants } = require('./theme/linkTheme');
+const { linkVariants } = require('./theme/link-theme');
 
 const linkPlugin = ({ addComponents, e }) => {
   const linkBase = {

@@ -1,5 +1,5 @@
 const { lightModeKey, darkModeKey } = require('../../colors');
-const { loadingBarTheme } = require('./theme/loadingBarTheme');
+const { loadingBarTheme } = require('./theme/loading-bar-theme');
 
 const loadingBarPlugin = ({ addComponents, e }) => {
   const loadingBarBase = {

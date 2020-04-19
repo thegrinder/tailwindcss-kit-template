@@ -1,6 +1,6 @@
 const { lightModeKey, darkModeKey } = require('../../../colors');
-const buttonLightTheme = require('./buttonLightTheme');
-const buttonDarkTheme = require('./buttonDarkTheme');
+const buttonLightTheme = require('./button-light-theme');
+const buttonDarkTheme = require('./button-dark-theme');
 
 const buttonVariants = {
   [darkModeKey]: buttonDarkTheme,
