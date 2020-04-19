@@ -7,6 +7,7 @@ route: components/button
 # Button
 
 import { Playground } from 'docz';
+import { useColorMode } from 'theme-ui';
 import { MdDelete, MdSend } from 'react-icons/md';
 import Button from './ReactButton';
 
@@ -207,4 +208,20 @@ const Button = ({
   <Button iconEnd={<MdSend size={20} />} className="w-full">
     Send
   </Button>
+</Playground>
+
+## Link Button
+
+<Playground>
+  {() => {
+    const [colorMode] = useColorMode();
+    return (
+      <a
+        className={`btn btn-size-md ${colorMode}:btn-variant-primary--medium`}
+        href="#"
+      >
+        Link button
+      </a>
+    );
+  }}
 </Playground>
