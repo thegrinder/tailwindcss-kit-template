@@ -36,7 +36,11 @@ const mapNestedThemeToClasses = (theme, callback) =>
     {}
   );
 
+const alpha = (hslColor, num) =>
+  hslColor.replace(')', `, ${num})`).replace('hsl', 'hsla');
+
 module.exports = {
   mapNestedThemeToClasses,
   mapFlatThemeToClasses,
+  alpha,
 };

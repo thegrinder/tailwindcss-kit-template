@@ -1,0 +1,40 @@
+---
+name: Loading bar
+menu: Components
+route: components/loading-bar
+---
+
+# Loading bar
+
+import { Playground } from 'docz';
+import { useColorMode } from 'theme-ui';
+import LoadingBar from './ReactLoadingBar';
+
+## React example
+
+```jsx
+import React from 'react';
+import classNames from 'classnames';
+import { useColorMode } from 'theme-ui';
+
+const LoadingBar = ({ className, ...rest }) => {
+  const [colorMode] = useColorMode();
+  return (
+    <span
+      className={classNames(
+        'loading-bar',
+        `${colorMode}:loading-bar`,
+        className
+      )}
+      {...rest}
+    />
+  );
+};
+```
+
+<Playground>
+  {() => {
+    const [colorMode] = useColorMode();
+    return <LoadingBar />;
+  }}
+</Playground>

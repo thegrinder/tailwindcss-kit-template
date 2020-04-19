@@ -20,6 +20,7 @@ const card = require('./src/components/card/card');
 const modal = require('./src/components/modal/modal');
 const spinner = require('./src/components/spinner/spinner');
 const divider = require('./src/components/divider/divider');
+const loadingBar = require('./src/components/loading-bar/loading-bar');
 
 module.exports = {
   theme: {
@@ -139,6 +140,7 @@ module.exports = {
     flexGrid,
     fontWeight,
     link,
+    loadingBar,
     modal,
     spacing,
     spinner,
