@@ -1,0 +1,31 @@
+---
+name: Divider
+menu: Components
+route: components/divider
+---
+
+# Divider
+
+import { Playground } from 'docz';
+import { useColorMode } from 'theme-ui';
+import Divider from './ReactDivider';
+
+```jsx
+import React from 'react';
+import classNames from 'classnames';
+import { useColorMode } from 'theme-ui';
+
+const Divider = ({ className, ...rest }) => {
+  const [colorMode] = useColorMode();
+  return (
+    <span
+      className={classNames('divider', `${colorMode}:divider`, className)}
+      {...rest}
+    />
+  );
+};
+```
+
+<Playground>
+  <Divider />
+</Playground>

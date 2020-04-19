@@ -1,7 +1,7 @@
 const { mapNestedThemeToClasses } = require('../../helpers');
 const { linkVariants } = require('./theme/linkTheme');
 
-const buttonPlugin = ({ addComponents, e }) => {
+const linkPlugin = ({ addComponents, e }) => {
   const linkBase = {
     '.link': {
       fontFamily: `'Inter var', sans-serif`,
@@ -37,4 +37,4 @@ const buttonPlugin = ({ addComponents, e }) => {
   });
 };
 
-module.exports = buttonPlugin;
+module.exports = linkPlugin;
