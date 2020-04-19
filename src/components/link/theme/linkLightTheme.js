@@ -1,7 +1,7 @@
 const { lightTheme } = require('../../../colors');
 
 const linkLightTheme = {
-  default: {
+  primary: {
     normal: {
       color: lightTheme.primary[400],
     },

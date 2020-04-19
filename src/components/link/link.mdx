@@ -8,8 +8,48 @@ route: components/link
 
 import { Playground } from 'docz';
 import { useColorMode } from 'theme-ui';
+import Link from './ReactLink';
+
+```jsx
+import React from 'react';
+import classNames from 'classnames';
+import { useColorMode } from 'theme-ui';
+
+const Link = ({ variant = 'primary', className, children, ...rest }) => {
+  const [colorMode] = useColorMode();
+  return (
+    <a
+      className={classNames(
+        'link',
+        `${colorMode}:link-variant-${variant}`,
+        className
+      )}
+      {...rest}
+    >
+      {children}
+    </a>
+  );
+};
+```
 
 ## Variants
+
+<Playground>
+  <>
+    <div className="mb-4">
+      <Link variant="primary" href="#">
+        primary
+      </Link>
+    </div>
+    <div className="mb-4">
+      <Link variant="muted" href="#">
+        muted
+      </Link>
+    </div>
+  </>
+</Playground>
+
+## Button link
 
 <Playground>
   {() => {
@@ -17,14 +57,14 @@ import { useColorMode } from 'theme-ui';
     return (
       <>
         <div className="mb-4">
-          <a className={`link ${colorMode}:link-variant-default`} href="#">
-            default
-          </a>
+          <button className={`link ${colorMode}:link-variant-primary`}>
+            primary
+          </button>
         </div>
         <div className="mb-4">
-          <a className={`link ${colorMode}:link-variant-muted`} href="#">
+          <button className={`link ${colorMode}:link-variant-muted`}>
             muted
-          </a>
+          </button>
         </div>
       </>
     );
