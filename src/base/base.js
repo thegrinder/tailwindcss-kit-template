@@ -71,6 +71,14 @@ const basePlugin = ({ addBase, config }) => {
         cursor: 'default',
       },
     },
+    fieldset: {
+      minWidth: '0',
+      padding: '0.01em 0 0 0',
+    },
+    legend: {
+      display: 'table',
+      fontSize: config('theme.fontSize.base'),
+    },
   };
   addBase(base);
 };
