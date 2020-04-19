@@ -18,6 +18,7 @@ const button = require('./src/components/button/button');
 const link = require('./src/components/link/link');
 const card = require('./src/components/card/card');
 const modal = require('./src/components/modal/modal');
+const spinner = require('./src/components/spinner/spinner');
 
 module.exports = {
   theme: {
@@ -136,6 +137,7 @@ module.exports = {
     link,
     modal,
     spacing,
+    spinner,
     textAlign,
     textColor,
   ],

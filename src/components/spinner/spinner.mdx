@@ -1,0 +1,59 @@
+---
+name: Spinner
+menu: Components
+route: components/spinner
+---
+
+# Spinner
+
+import { Playground } from 'docz';
+import { useColorMode } from 'theme-ui';
+import Spinner from './ReactSpinner';
+
+```jsx
+import React from 'react';
+import classNames from 'classnames';
+
+const Spinner = ({ size = 'md', ...rest }) => (
+  <span className={classNames('spinner', `spinner-size-${size}`)} {...rest} />
+);
+```
+
+## Sizes
+
+<Playground>
+  <div className="mb-4">
+    <Spinner size="sm" />
+  </div>
+  <div className="mb-4">
+    <Spinner size="md" />
+  </div>
+  <Spinner size="lg" />
+</Playground>
+
+## Sizes
+
+There are no predefined colors. However, spinner inherits the color of its parent.
+
+<Playground>
+  {() => {
+    const [colorMode] = useColorMode();
+    return (
+      <>
+        <div className="mb-4">
+          <span className={`${colorMode}:text-primary-500`}>
+            <Spinner />
+          </span>
+        </div>
+        <div className="mb-4">
+          <span className={`${colorMode}:text-success-500`}>
+            <Spinner />
+          </span>
+        </div>
+        <span className={`${colorMode}:text-danger-500`}>
+          <Spinner />
+        </span>
+      </>
+    );
+  }}
+</Playground>
