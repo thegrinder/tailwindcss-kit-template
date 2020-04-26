@@ -8,6 +8,7 @@ route: components/card
 
 import { Playground } from 'docz';
 import Card from './ReactCard';
+import Button from '../button/ReactButton';
 
 ## React example
 
@@ -37,9 +38,23 @@ const Card = ({ elevation = 1, className, children, ...rest }) => {
 
 <Playground>
   <Card elevation={1} className="pa-8 mb-4">
-    Elevation 1
+    <div className="flex -mh-2">
+      <div className="col-auto ph-2">
+        <Button emphasis="medium">primary</Button>
+      </div>
+      <div className="col-auto ph-2">
+        <Button emphasis="high">primary</Button>
+      </div>
+    </div>
   </Card>
-  <Card elevation={2} className="pa-8 mb-4">
-    Elevation 2
+  <Card elevation={2} className="pa-8 mb-2">
+    <div className="flex -mh-2">
+      <div className="col-auto ph-2">
+        <Button emphasis="medium">primary</Button>
+      </div>
+      <div className="col-auto ph-2">
+        <Button emphasis="high">primary</Button>
+      </div>
+    </div>
   </Card>
 </Playground>
