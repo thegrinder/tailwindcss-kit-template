@@ -63,7 +63,6 @@ const basePlugin = ({ addBase, config }) => {
       cursor: 'pointer',
       outline: 'none',
       textDecoration: 'none',
-      fontSize: config('theme.fontSize.base'),
       '&:hover, &:focus, &:active, &:visited': {
         textDecoration: 'none',
       },
