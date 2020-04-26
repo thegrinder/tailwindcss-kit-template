@@ -3,17 +3,17 @@ import { darkTheme, lightTheme } from '../src/colors';
 
 const dark = {
   primary: darkTheme.primary[500],
-  text: darkTheme.neutral[800],
+  text: darkTheme.neutral[700],
   muted: darkTheme.neutral[700],
   link: darkTheme.primary[500],
   background: darkTheme.neutral[0],
   border: darkTheme.neutral[100],
   sidebar: {
     bg: darkTheme.neutral[50],
-    navGroup: darkTheme.neutral[700],
+    navGroup: darkTheme.neutral[600],
     navLink: darkTheme.neutral[700],
     navLinkActive: darkTheme.primary[500],
-    tocLink: darkTheme.neutral[500],
+    tocLink: darkTheme.neutral[400],
     tocLinkActive: darkTheme.primary[500],
   },
   header: {
@@ -33,7 +33,7 @@ const dark = {
 
 const light = {
   primary: lightTheme.primary[500],
-  text: lightTheme.neutral[800],
+  text: lightTheme.neutral[700],
   muted: lightTheme.neutral[700],
   link: lightTheme.primary[500],
   background: lightTheme.neutral[0],
