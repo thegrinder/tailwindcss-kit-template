@@ -78,6 +78,61 @@ const basePlugin = ({ addBase, config }) => {
       display: 'table',
       fontSize: config('theme.fontSize.base'),
     },
+    [[
+      'input[type=text]',
+      'input[type=email]',
+      'input[type=password]',
+      'input[type=number]',
+      'input[type=tel]',
+      'textarea',
+      'select',
+    ].join(', ')]: {
+      '-webkit-appearance': 'none',
+      maxWidth: '100%',
+      width: '100%',
+      borderWidth: '1px',
+      borderStyle: 'solid',
+      borderColor: 'transparent',
+      backgroundColor: 'transparent',
+      transition: '0.2s ease-in-out',
+      transitionProperty: 'color, background-color, border',
+      fontSize: config('theme.fontSize.base'),
+      fontFamily: `'Inter var', sans-serif`,
+      borderRadius: '.375rem',
+      '&:focus': {
+        outline: 'none',
+      },
+      '&::placeholder': {
+        color: 'inherit',
+      },
+    },
+    'input[type=checkbox], input[type=radio]': {
+      '-webkit-appearance': 'none',
+      overflow: 'hidden',
+      display: 'inline-block',
+      margin: 0,
+      fontSize: config('theme.fontSize.base'),
+      height: '1.5em',
+      width: '1.5em',
+      verticalAlign: 'middle',
+      backgroundColor: 'transparent',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: '50% 50%',
+      borderWidth: '1px',
+      borderStyle: 'solid',
+      transition: '0.2s ease-in-out',
+      transitionProperty: 'background-color, border',
+      cursor: 'pointer',
+      '&:hover': {
+        cursor: 'pointer',
+      },
+      '&:focus': {
+        outline: 'none',
+      },
+      '&:disabled': {
+        cursor: 'default',
+      },
+    },
   };
   addBase(base);
 };
