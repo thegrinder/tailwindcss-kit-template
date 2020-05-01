@@ -37,7 +37,7 @@ const buttonPlugin = ({ addComponents, e }) => {
     buttonVariants,
     (colorMode, variant, emphasis) => ({
       [`.${e(`${colorMode}:btn-variant-${variant}--${emphasis}`)}`]: {
-        ...buttonVariants[colorMode][variant][emphasis].normal,
+        ...buttonVariants[colorMode][variant][emphasis].base,
         '&:hover': buttonVariants[colorMode][variant][emphasis].hover,
         '&:active': buttonVariants[colorMode][variant][emphasis].active,
         '&:disabled': buttonVariants[colorMode][variant][emphasis].disabled,

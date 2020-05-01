@@ -2,7 +2,7 @@ const { lightTheme } = require('../../../colors');
 
 const linkLightTheme = {
   primary: {
-    normal: {
+    base: {
       color: lightTheme.primary[400],
     },
     hover: {
@@ -10,7 +10,7 @@ const linkLightTheme = {
     },
   },
   muted: {
-    normal: {
+    base: {
       color: lightTheme.neutral[400],
     },
     hover: {

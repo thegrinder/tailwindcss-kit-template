@@ -3,7 +3,7 @@ const { darkTheme } = require('../../../colors');
 const buttonDarkTheme = {
   primary: {
     high: {
-      normal: {
+      base: {
         color: darkTheme.neutral[0],
         backgroundColor: darkTheme.primary[500],
       },
@@ -18,7 +18,7 @@ const buttonDarkTheme = {
       },
     },
     medium: {
-      normal: {
+      base: {
         color: darkTheme.primary[500],
         backgroundColor: darkTheme.primary[50],
       },
@@ -36,7 +36,7 @@ const buttonDarkTheme = {
       },
     },
     low: {
-      normal: {
+      base: {
         color: darkTheme.primary[500],
       },
       hover: {
@@ -55,7 +55,7 @@ const buttonDarkTheme = {
   },
   danger: {
     high: {
-      normal: {
+      base: {
         color: darkTheme.neutral[0],
         backgroundColor: darkTheme.danger[500],
       },
@@ -70,7 +70,7 @@ const buttonDarkTheme = {
       },
     },
     medium: {
-      normal: {
+      base: {
         color: darkTheme.danger[500],
         backgroundColor: darkTheme.danger[50],
       },
@@ -88,7 +88,7 @@ const buttonDarkTheme = {
       },
     },
     low: {
-      normal: {
+      base: {
         color: darkTheme.danger[500],
       },
       hover: {

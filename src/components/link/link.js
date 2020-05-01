@@ -25,7 +25,7 @@ const linkPlugin = ({ addComponents, e }) => {
     linkVariants,
     (colorMode, variant) => ({
       [`.${e(`${colorMode}:link-variant-${variant}`)}`]: {
-        ...linkVariants[colorMode][variant].normal,
+        ...linkVariants[colorMode][variant].base,
         '&:hover': linkVariants[colorMode][variant].hover,
       },
     })
