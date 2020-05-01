@@ -21,6 +21,7 @@ const modal = require('./src/components/modal/modal');
 const spinner = require('./src/components/spinner/spinner');
 const divider = require('./src/components/divider/divider');
 const loadingBar = require('./src/components/loading-bar/loading-bar');
+const input = require('./src/components/input/input');
 
 module.exports = {
   theme: {
@@ -139,6 +140,7 @@ module.exports = {
     divider,
     flexGrid,
     fontWeight,
+    input,
     link,
     loadingBar,
     modal,
