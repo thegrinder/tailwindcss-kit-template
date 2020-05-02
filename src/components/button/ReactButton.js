@@ -32,7 +32,13 @@ const Button = ({
           <span className={`spinner spinner-size-${size}`} />
         </span>
       )}
-      <span className={loading ? 'opacity-0' : 'opacity-100'}>
+      <span
+        className={classNames(
+          loading ? 'opacity-0' : 'opacity-100',
+          'inline-flex',
+          'items-center'
+        )}
+      >
         {iconStart && <span className="dib leading-0 mr-2">{iconStart}</span>}
         {square ? <span className="leading-0">{children}</span> : children}
         {iconEnd && <span className="dib leading-0 ml-2">{iconEnd}</span>}
