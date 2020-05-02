@@ -1,0 +1,55 @@
+---
+name: Icon
+menu: Components
+route: components/icon
+---
+
+# Icon
+
+import { Playground } from 'docz';
+import {
+  MdHome,
+  MdDone,
+  MdWarning,
+  MdClear,
+  MdError,
+  MdCode,
+} from 'react-icons/md';
+import Icon from './ReactIcon';
+
+## React snippet
+
+```jsx
+import React from 'react';
+import classNames from 'classnames';
+import { useColorMode } from 'theme-ui';
+
+const Icon = ({ variant = 'primary', className, children }) => {
+  const [colorMode] = useColorMode();
+  return (
+    <span
+      className={classNames('icon', `${colorMode}:icon-${variant}`, className)}
+    >
+      {children}
+    </span>
+  );
+};
+```
+
+<Playground>
+  <Icon variant="neutral" className="mr-4">
+    <MdCode />
+  </Icon>
+  <Icon variant="primary" className="mr-4">
+    <MdHome />
+  </Icon>
+  <Icon variant="danger" className="mr-4">
+    <MdError />
+  </Icon>
+  <Icon variant="warning" className="mr-4">
+    <MdWarning />
+  </Icon>
+  <Icon variant="success" className="mb-4">
+    <MdDone />
+  </Icon>
+</Playground>

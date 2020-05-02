@@ -1,4 +1,4 @@
-const { mapNestedThemeToClasses } = require('../../helpers');
+const { mapFlatThemeToClasses } = require('../../helpers');
 const { linkVariants } = require('./theme/link-theme');
 
 const linkPlugin = ({ addComponents, e }) => {
@@ -21,7 +21,7 @@ const linkPlugin = ({ addComponents, e }) => {
     },
   };
 
-  const linkModes = mapNestedThemeToClasses(
+  const linkModes = mapFlatThemeToClasses(
     linkVariants,
     (colorMode, variant) => ({
       [`.${e(`${colorMode}:link-variant-${variant}`)}`]: {

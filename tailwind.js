@@ -2,26 +2,27 @@
 const base = require('./src/base/base');
 
 // utilities
-const flexGrid = require('./src/utilities/flex-grid');
-const spacing = require('./src/utilities/spacing');
-const borderRadius = require('./src/utilities/border-radius');
+const backgroundColor = require('./src/utilities/background-color/background-color');
 const border = require('./src/utilities/border');
+const borderRadius = require('./src/utilities/border-radius');
 const custom = require('./src/utilities/custom');
 const display = require('./src/utilities/display');
+const flexGrid = require('./src/utilities/flex-grid');
 const fontWeight = require('./src/utilities/font-weight');
+const spacing = require('./src/utilities/spacing');
 const textAlign = require('./src/utilities/text-align');
-const backgroundColor = require('./src/utilities/background-color/background-color');
 const textColor = require('./src/utilities/text-color/text-color');
 
 // components
 const button = require('./src/components/button/button');
-const link = require('./src/components/link/link');
 const card = require('./src/components/card/card');
+const divider = require('./src/components/divider/divider');
+const icon = require('./src/components/icon/icon');
+const input = require('./src/components/input/input');
+const link = require('./src/components/link/link');
+const loadingBar = require('./src/components/loading-bar/loading-bar');
 const modal = require('./src/components/modal/modal');
 const spinner = require('./src/components/spinner/spinner');
-const divider = require('./src/components/divider/divider');
-const loadingBar = require('./src/components/loading-bar/loading-bar');
-const input = require('./src/components/input/input');
 
 module.exports = {
   theme: {
@@ -122,8 +123,8 @@ module.exports = {
     'maxWidth',
     'minHeight',
     'minWidth',
-    'overflow',
     'opacity',
+    'overflow',
     'position',
     'width',
     'zIndex',
@@ -140,6 +141,7 @@ module.exports = {
     divider,
     flexGrid,
     fontWeight,
+    icon,
     input,
     link,
     loadingBar,
@@ -150,8 +152,8 @@ module.exports = {
     textColor,
   ],
   options: {
-    prefix: '',
     important: false,
+    prefix: '',
     separator: ':',
   },
 };
