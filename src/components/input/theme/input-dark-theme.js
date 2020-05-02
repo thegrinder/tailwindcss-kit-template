@@ -1,24 +1,39 @@
 const { darkTheme } = require('../../../colors');
 
 const inputDarkTheme = {
-  base: {
-    borderColor: darkTheme.neutral[600],
-    color: darkTheme.neutral[900],
-  },
-  active: {
-    borderColor: darkTheme.primary[500],
-  },
-  disabled: {
-    color: darkTheme.neutral[500],
-    backgroundColor: darkTheme.neutral[100],
-    borderColor: darkTheme.neutral[600],
+  normal: {
+    base: {
+      color: darkTheme.neutral[1000],
+      borderColor: darkTheme.neutral[300],
+    },
+    active: {
+      borderColor: darkTheme.primary[300],
+      boxShadow: `0 0 1px 2px ${darkTheme.primary[100]}`,
+    },
   },
   valid: {
-    borderColor: darkTheme.success[400],
+    base: {
+      borderColor: darkTheme.success[300],
+    },
+    active: {
+      borderColor: darkTheme.success[300],
+      boxShadow: `0 0 1px 2px ${darkTheme.success[100]}`,
+    },
   },
   invalid: {
-    color: darkTheme.danger[500],
-    borderColor: darkTheme.danger[500],
+    base: {
+      color: darkTheme.danger[500],
+      borderColor: darkTheme.danger[300],
+    },
+    active: {
+      borderColor: darkTheme.danger[300],
+      boxShadow: `0 0 1px 2px ${darkTheme.danger[100]}`,
+    },
+  },
+  disabled: {
+    color: darkTheme.neutral[300],
+    backgroundColor: darkTheme.neutral[50],
+    borderColor: darkTheme.neutral[300],
   },
 };
 

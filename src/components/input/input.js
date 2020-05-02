@@ -1,4 +1,3 @@
-const { mapFlatThemeToClasses } = require('../../helpers');
 const { inputTheme } = require('./theme/input-theme');
 
 const inputPlugin = ({ addComponents, e }) => {
@@ -17,27 +16,31 @@ const inputPlugin = ({ addComponents, e }) => {
       overflow: 'auto',
     },
   };
-  const inputModes = mapFlatThemeToClasses(inputTheme, (colorMode, state) => ({
-    ...(state === 'valid' || state === 'invalid'
-      ? {
-          [`.${e(`${colorMode}:input-${state}`)}`]: {
-            ...inputTheme[colorMode][state],
-            '&:focus': inputTheme[colorMode][state],
-            '&:disabled': inputTheme[colorMode].disabled,
-          },
-        }
-      : {
-          [`.${e(`${colorMode}:input`)}`]: {
-            ...inputTheme[colorMode].base,
-            '&:focus': inputTheme[colorMode].active,
-            '&:disabled': inputTheme[colorMode].disabled,
-          },
-        }),
-  }));
+
+  const [inputLightMode, inputDarkMode] = Object.keys(inputTheme).map(
+    (colorMode) => ({
+      [`.${e(`${colorMode}:input`)}`]: {
+        ...inputTheme[colorMode].normal.base,
+        '&:focus': inputTheme[colorMode].normal.active,
+        '&:disabled': inputTheme[colorMode].disabled,
+      },
+      [`.${e(`${colorMode}:input-valid`)}`]: {
+        ...inputTheme[colorMode].valid.base,
+        '&:focus': inputTheme[colorMode].valid.active,
+        '&:disabled': inputTheme[colorMode].disabled,
+      },
+      [`.${e(`${colorMode}:input-invalid`)}`]: {
+        ...inputTheme[colorMode].invalid.base,
+        '&:focus': inputTheme[colorMode].invalid.active,
+        '&:disabled': inputTheme[colorMode].disabled,
+      },
+    })
+  );
 
   addComponents({
     ...inputBase,
-    ...inputModes,
+    ...inputLightMode,
+    ...inputDarkMode,
   });
 };
 
