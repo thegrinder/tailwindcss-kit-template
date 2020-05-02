@@ -1,0 +1,60 @@
+---
+name: Outlined label
+menu: Components
+route: components/outlined-label
+---
+
+# Outlined label
+
+import { Playground } from 'docz';
+import OutlinedLabel from './ReactOutlinedLabel';
+
+## React snippet
+
+```jsx
+import React from 'react';
+import classNames from 'classnames';
+import { useColorMode } from 'theme-ui';
+
+const OutlinedLabel = ({
+  disabled = false,
+  valid = false,
+  invalid = false,
+  className,
+  children,
+  label,
+}) => {
+  const [colorMode] = useColorMode();
+  return (
+    <div className={classNames('outlined-label-wrapper', className)}>
+      {children}
+      <label
+        className={classNames({
+          'outlined-label': true,
+          [`${colorMode}:outlined-label`]: true,
+          [`${colorMode}:outlined-label-disabled`]: disabled,
+          [`${colorMode}:outlined-label-valid`]: valid,
+          [`${colorMode}:outlined-label-invalid`]: invalid,
+        })}
+      >
+        {label}
+      </label>
+    </div>
+  );
+};
+```
+
+<Playground>
+  <OutlinedLabel label="Regular" className="mb-4">
+    <input type="checkbox" />
+  </OutlinedLabel>
+  <OutlinedLabel disabled label="Disabled" className="mb-4">
+    <input type="checkbox" />
+  </OutlinedLabel>
+  <OutlinedLabel valid label="Valid" className="mb-4">
+    <input type="checkbox" />
+  </OutlinedLabel>
+  <OutlinedLabel invalid label="Invalid" className="mb-4">
+    <input type="checkbox" />
+  </OutlinedLabel>
+</Playground>

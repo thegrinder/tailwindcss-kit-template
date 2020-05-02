@@ -14,6 +14,7 @@ const textAlign = require('./src/utilities/text-align');
 const textColor = require('./src/utilities/text-color/text-color');
 
 // components
+const outlinedLabel = require('./src/components/outlined-label/outlined-label');
 const button = require('./src/components/button/button');
 const card = require('./src/components/card/card');
 const divider = require('./src/components/divider/divider');
@@ -146,6 +147,7 @@ module.exports = {
     link,
     loadingBar,
     modal,
+    outlinedLabel,
     spacing,
     spinner,
     textAlign,
