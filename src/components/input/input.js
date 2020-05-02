@@ -3,13 +3,13 @@ const { inputTheme } = require('./theme/input-theme');
 const inputPlugin = ({ addComponents, e }) => {
   const inputBase = {
     '.input': {
-      height: '2.5rem',
+      height: '2.75rem',
       padding: '0 .625rem',
     },
     '.select': {
       textTransform: 'none',
       padding: '0 .625rem',
-      height: '2.5rem',
+      height: '2.75rem',
     },
     '.textarea': {
       padding: '.25rem .625rem',

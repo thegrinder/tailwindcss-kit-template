@@ -21,6 +21,9 @@ const outlinedLabelPlugin = ({ addComponents, e }) => {
       borderWidth: '1px',
       borderStyle: 'solid',
       borderRadius: '.375rem',
+      boxShadow: '0 0 0 3px transparent',
+      transition: '0.2s ease-in-out',
+      transitionProperty: 'border, box-shadow',
     },
   };
 
@@ -28,22 +31,22 @@ const outlinedLabelPlugin = ({ addComponents, e }) => {
     outlinedLabelTheme
   ).map((colorMode) => ({
     [`.${e(`${colorMode}:outlined-label`)}`]: {
-      ...outlinedLabelTheme[colorMode].base,
-      '&:hover': outlinedLabelTheme[colorMode].hover,
-      'input:checked ~ &, input:focus ~ &':
-        outlinedLabelTheme[colorMode].active,
+      ...outlinedLabelTheme[colorMode].normal.base,
+      'input:focus ~ &': outlinedLabelTheme[colorMode].normal.active,
+      'input:checked ~ &': outlinedLabelTheme[colorMode].normal.checked,
     },
-    [`.${e(`${colorMode}:outlined-label-disabled`)}`]: {
-      ...outlinedLabelTheme[colorMode].disabled,
-    },
+    [`.${e(`${colorMode}:outlined-label-disabled`)}`]: outlinedLabelTheme[
+      colorMode
+    ].disabled,
     [`.${e(`${colorMode}:outlined-label-valid`)}`]: {
-      ...outlinedLabelTheme[colorMode].valid,
-      'input:checked ~ &, input:focus ~ &': outlinedLabelTheme[colorMode].valid,
+      ...outlinedLabelTheme[colorMode].valid.base,
+      'input:checked ~ &': outlinedLabelTheme[colorMode].valid.base,
+      'input:focus ~ &': outlinedLabelTheme[colorMode].valid.active,
     },
     [`.${e(`${colorMode}:outlined-label-invalid`)}`]: {
-      ...outlinedLabelTheme[colorMode].invalid,
-      'input:checked ~ &, input:focus ~ &':
-        outlinedLabelTheme[colorMode].invalid,
+      ...outlinedLabelTheme[colorMode].invalid.base,
+      'input:checked ~ &': outlinedLabelTheme[colorMode].invalid.base,
+      'input:focus ~ &': outlinedLabelTheme[colorMode].invalid.active,
     },
   }));
 

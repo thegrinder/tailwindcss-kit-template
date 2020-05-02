@@ -90,7 +90,7 @@ const basePlugin = ({ addBase, config }) => {
       borderStyle: 'solid',
       borderColor: 'transparent',
       backgroundColor: 'transparent',
-      boxShadow: '0 0 0 2px transparent',
+      boxShadow: '0 0 0 3px transparent',
       transition: '0.2s ease-in-out',
       transitionProperty: 'color, background-color, border, box-shadow',
       fontSize: config('theme.fontSize.base'),

@@ -8,7 +8,7 @@ const inputDarkTheme = {
     },
     active: {
       borderColor: darkTheme.primary[300],
-      boxShadow: `0 0 1px 2px ${darkTheme.primary[100]}`,
+      boxShadow: `0 0 0 3px ${darkTheme.primary[100]}`,
     },
   },
   valid: {
@@ -17,7 +17,7 @@ const inputDarkTheme = {
     },
     active: {
       borderColor: darkTheme.success[300],
-      boxShadow: `0 0 1px 2px ${darkTheme.success[100]}`,
+      boxShadow: `0 0 0 3px ${darkTheme.success[100]}`,
     },
   },
   invalid: {
@@ -27,7 +27,7 @@ const inputDarkTheme = {
     },
     active: {
       borderColor: darkTheme.danger[300],
-      boxShadow: `0 0 1px 2px ${darkTheme.danger[100]}`,
+      boxShadow: `0 0 0 3px ${darkTheme.danger[100]}`,
     },
   },
   disabled: {

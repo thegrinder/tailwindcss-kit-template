@@ -1,25 +1,42 @@
 const { darkTheme } = require('../../../colors');
 
 const outlinedLabelDarkTheme = {
-  base: {
-    borderColor: darkTheme.neutral[600],
-    color: darkTheme.neutral[900],
-  },
-  hover: {},
-  active: {
-    borderColor: darkTheme.primary[400],
-  },
-  disabled: {
-    borderColor: darkTheme.neutral[600],
-    color: darkTheme.neutral[500],
+  normal: {
+    base: {
+      borderColor: darkTheme.neutral[300],
+      color: darkTheme.neutral[1000],
+    },
+    checked: {
+      borderColor: darkTheme.primary[300],
+    },
+    active: {
+      borderColor: darkTheme.primary[300],
+      boxShadow: `0 0 0 3px ${darkTheme.primary[100]}`,
+    },
   },
   valid: {
-    borderColor: darkTheme.success[400],
-    color: darkTheme.neutral[900],
+    base: {
+      borderColor: darkTheme.success[500],
+      color: darkTheme.neutral[1000],
+    },
+    active: {
+      borderColor: darkTheme.success[500],
+      boxShadow: `0 0 0 3px ${darkTheme.success[100]}`,
+    },
   },
   invalid: {
-    borderColor: darkTheme.danger[500],
-    color: darkTheme.danger[500],
+    base: {
+      borderColor: darkTheme.danger[500],
+      color: darkTheme.danger[500],
+    },
+    active: {
+      borderColor: darkTheme.danger[500],
+      boxShadow: `0 0 0 3px ${darkTheme.danger[100]}`,
+    },
+  },
+  disabled: {
+    borderColor: darkTheme.neutral[300],
+    color: darkTheme.neutral[300],
   },
 };
 
