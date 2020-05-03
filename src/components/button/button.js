@@ -35,14 +35,19 @@ const buttonPlugin = ({ addComponents, e }) => {
 
   const btnModes = mapNestedThemeToClasses(
     buttonVariants,
-    (colorMode, variant, emphasis) => ({
-      [`.${e(`${colorMode}:btn-variant-${variant}--${emphasis}`)}`]: {
-        ...buttonVariants[colorMode][variant][emphasis].base,
-        '&:hover': buttonVariants[colorMode][variant][emphasis].hover,
-        '&:active': buttonVariants[colorMode][variant][emphasis].active,
-        '&:disabled': buttonVariants[colorMode][variant][emphasis].disabled,
-      },
-    })
+    (colorMode, variant, emphasis) => {
+      const { base, hover, active, disabled } = buttonVariants[colorMode][
+        variant
+      ][emphasis];
+      return {
+        [`.${e(`${colorMode}:btn-variant-${variant}--${emphasis}`)}`]: {
+          ...base,
+          '&:hover': hover,
+          '&:active': active,
+          '&:disabled': disabled,
+        },
+      };
+    }
   );
 
   addComponents({

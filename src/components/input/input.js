@@ -18,23 +18,26 @@ const inputPlugin = ({ addComponents, e }) => {
   };
 
   const [inputLightMode, inputDarkMode] = Object.keys(inputTheme).map(
-    (colorMode) => ({
-      [`.${e(`${colorMode}:input-normal`)}`]: {
-        ...inputTheme[colorMode].normal.base,
-        '&:focus': inputTheme[colorMode].normal.active,
-        '&:disabled': inputTheme[colorMode].normal.disabled,
-      },
-      [`.${e(`${colorMode}:input-valid`)}`]: {
-        ...inputTheme[colorMode].valid.base,
-        '&:focus': inputTheme[colorMode].valid.active,
-        '&:disabled': inputTheme[colorMode].normal.disabled,
-      },
-      [`.${e(`${colorMode}:input-invalid`)}`]: {
-        ...inputTheme[colorMode].invalid.base,
-        '&:focus': inputTheme[colorMode].invalid.active,
-        '&:disabled': inputTheme[colorMode].normal.disabled,
-      },
-    })
+    (colorMode) => {
+      const { normal, valid, invalid } = inputTheme[colorMode];
+      return {
+        [`.${e(`${colorMode}:input-normal`)}`]: {
+          ...normal.base,
+          '&:focus': normal.active,
+          '&:disabled': normal.disabled,
+        },
+        [`.${e(`${colorMode}:input-valid`)}`]: {
+          ...valid.base,
+          '&:focus': valid.active,
+          '&:disabled': normal.disabled,
+        },
+        [`.${e(`${colorMode}:input-invalid`)}`]: {
+          ...invalid.base,
+          '&:focus': invalid.active,
+          '&:disabled': normal.disabled,
+        },
+      };
+    }
   );
 
   addComponents({

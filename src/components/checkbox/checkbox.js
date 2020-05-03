@@ -33,19 +33,22 @@ const checkboxPlugin = ({ addComponents, e }) => {
   };
 
   const [checkboxLightMode, checkboxDarkMode] = Object.keys(checkboxTheme).map(
-    (colorMode) => ({
-      [`.${e(`${colorMode}:checkbox-normal`)}`]: {
-        ...checkboxTheme[colorMode].normal.base,
-        '&:focus': checkboxTheme[colorMode].normal.active,
-        '&:checked': checkboxTheme[colorMode].normal.checked,
-        '&:disabled': checkboxTheme[colorMode].normal.disabled,
-      },
-      [`.${e(`${colorMode}:checkbox-invalid`)}`]: {
-        ...checkboxTheme[colorMode].invalid.base,
-        '&:focus': checkboxTheme[colorMode].invalid.active,
-        '&:disabled': checkboxTheme[colorMode].normal.disabled,
-      },
-    })
+    (colorMode) => {
+      const { normal, invalid } = checkboxTheme[colorMode];
+      return {
+        [`.${e(`${colorMode}:checkbox-normal`)}`]: {
+          ...normal.base,
+          '&:focus': normal.active,
+          '&:checked': normal.checked,
+          '&:disabled': normal.disabled,
+        },
+        [`.${e(`${colorMode}:checkbox-invalid`)}`]: {
+          ...invalid.base,
+          '&:focus': invalid.active,
+          '&:disabled': normal.disabled,
+        },
+      };
+    }
   );
 
   addComponents({

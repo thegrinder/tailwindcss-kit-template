@@ -23,12 +23,15 @@ const linkPlugin = ({ addComponents, e }) => {
 
   const linkModes = mapFlatThemeToClasses(
     linkVariants,
-    (colorMode, variant) => ({
-      [`.${e(`${colorMode}:link-variant-${variant}`)}`]: {
-        ...linkVariants[colorMode][variant].base,
-        '&:hover': linkVariants[colorMode][variant].hover,
-      },
-    })
+    (colorMode, variant) => {
+      const { base, hover } = linkVariants[colorMode][variant];
+      return {
+        [`.${e(`${colorMode}:link-variant-${variant}`)}`]: {
+          ...base,
+          '&:hover': hover,
+        },
+      };
+    }
   );
 
   addComponents({

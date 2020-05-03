@@ -29,26 +29,27 @@ const outlinedLabelPlugin = ({ addComponents, e }) => {
 
   const [lightOutlinedLabelModes, darkOutlinedLabelModes] = Object.keys(
     outlinedLabelTheme
-  ).map((colorMode) => ({
-    [`.${e(`${colorMode}:outlined-label-normal`)}`]: {
-      ...outlinedLabelTheme[colorMode].normal.base,
-      'input:focus ~ &': outlinedLabelTheme[colorMode].normal.active,
-      'input:checked ~ &': outlinedLabelTheme[colorMode].normal.checked,
-    },
-    [`.${e(`${colorMode}:outlined-label-disabled`)}`]: outlinedLabelTheme[
-      colorMode
-    ].normal.disabled,
-    [`.${e(`${colorMode}:outlined-label-valid`)}`]: {
-      ...outlinedLabelTheme[colorMode].valid.base,
-      'input:checked ~ &': outlinedLabelTheme[colorMode].valid.base,
-      'input:focus ~ &': outlinedLabelTheme[colorMode].valid.active,
-    },
-    [`.${e(`${colorMode}:outlined-label-invalid`)}`]: {
-      ...outlinedLabelTheme[colorMode].invalid.base,
-      'input:checked ~ &': outlinedLabelTheme[colorMode].invalid.base,
-      'input:focus ~ &': outlinedLabelTheme[colorMode].invalid.active,
-    },
-  }));
+  ).map((colorMode) => {
+    const { normal, valid, invalid } = outlinedLabelTheme[colorMode];
+    return {
+      [`.${e(`${colorMode}:outlined-label-normal`)}`]: {
+        ...normal.base,
+        'input:focus ~ &': normal.active,
+        'input:checked ~ &': normal.checked,
+      },
+      [`.${e(`${colorMode}:outlined-label-disabled`)}`]: normal.disabled,
+      [`.${e(`${colorMode}:outlined-label-valid`)}`]: {
+        ...valid.base,
+        'input:checked ~ &': valid.base,
+        'input:focus ~ &': valid.active,
+      },
+      [`.${e(`${colorMode}:outlined-label-invalid`)}`]: {
+        ...invalid.base,
+        'input:checked ~ &': invalid.base,
+        'input:focus ~ &': invalid.active,
+      },
+    };
+  });
 
   addComponents({
     ...outlinedLabelBase,
