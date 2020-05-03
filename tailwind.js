@@ -17,6 +17,7 @@ const textColor = require('./src/utilities/text-color/text-color');
 const outlinedLabel = require('./src/components/outlined-label/outlined-label');
 const button = require('./src/components/button/button');
 const card = require('./src/components/card/card');
+const checkbox = require('./src/components/checkbox/checkbox');
 const divider = require('./src/components/divider/divider');
 const icon = require('./src/components/icon/icon');
 const input = require('./src/components/input/input');
@@ -137,6 +138,7 @@ module.exports = {
     borderRadius,
     button,
     card,
+    checkbox,
     custom,
     display,
     divider,

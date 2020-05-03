@@ -2,28 +2,28 @@ import React from 'react';
 import classNames from 'classnames';
 import { useColorMode } from 'theme-ui';
 
-const Select = ({
+const Checkbox = ({
   valid = false,
   invalid = false,
   disabled = false,
   className,
-  children,
+  checked,
 }) => {
   const [colorMode] = useColorMode();
   return (
-    <select
+    <input
+      type="checkbox"
+      checked={checked}
       disabled={disabled}
       className={classNames({
-        select: true,
+        checkbox: true,
         [className]: !!className,
-        [`${colorMode}:input-normal`]: !valid && !invalid,
-        [`${colorMode}:input-valid`]: valid,
-        [`${colorMode}:input-invalid`]: invalid,
+        [`${colorMode}:checkbox-normal`]: !valid && !invalid,
+        [`${colorMode}:checkbox-valid`]: valid,
+        [`${colorMode}:checkbox-invalid`]: invalid,
       })}
-    >
-      {children}
-    </select>
+    />
   );
 };
 
-export default Select;
+export default Checkbox;

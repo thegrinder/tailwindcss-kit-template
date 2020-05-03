@@ -1,0 +1,50 @@
+---
+name: Checkbox
+menu: Components
+route: components/checkbox
+---
+
+# Checkbox
+
+import { Playground } from 'docz';
+import Checkbox from './ReactCheckbox';
+
+## Standalone checkbox
+
+### React snippet
+
+```jsx
+import React from 'react';
+import classNames from 'classnames';
+import { useColorMode } from 'theme-ui';
+
+const Checkbox = ({
+  invalid = false,
+  disabled = false,
+  className,
+  checked,
+}) => {
+  const [colorMode] = useColorMode();
+  return (
+    <input
+      type="checkbox"
+      checked={checked}
+      disabled={disabled}
+      className={classNames({
+        checkbox: true,
+        [className]: !!className,
+        [`${colorMode}:checkbox-normal`]: !invalid,
+        [`${colorMode}:checkbox-invalid`]: invalid,
+      })}
+    />
+  );
+};
+```
+
+<Playground>
+  <Checkbox className="mr-4" />
+  <Checkbox checked className="mr-4" />
+  <Checkbox disabled className="mr-4" />
+  <Checkbox disabled checked className="mr-4" />
+  <Checkbox invalid className="mr-4" />
+</Playground>
