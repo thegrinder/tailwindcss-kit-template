@@ -31,7 +31,8 @@ const OutlinedLabel = ({
       <label
         className={classNames({
           'outlined-label': true,
-          [`${colorMode}:outlined-label`]: true,
+          [`${colorMode}:outlined-label-normal`]:
+            !disabled && !valid && !invalid,
           [`${colorMode}:outlined-label-disabled`]: disabled,
           [`${colorMode}:outlined-label-valid`]: valid,
           [`${colorMode}:outlined-label-invalid`]: invalid,

@@ -19,7 +19,7 @@ const inputPlugin = ({ addComponents, e }) => {
 
   const [inputLightMode, inputDarkMode] = Object.keys(inputTheme).map(
     (colorMode) => ({
-      [`.${e(`${colorMode}:input`)}`]: {
+      [`.${e(`${colorMode}:input-normal`)}`]: {
         ...inputTheme[colorMode].normal.base,
         '&:focus': inputTheme[colorMode].normal.active,
         '&:disabled': inputTheme[colorMode].disabled,

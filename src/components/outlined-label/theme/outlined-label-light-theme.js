@@ -20,7 +20,6 @@ const outlinedLabelLightTheme = {
       color: lightTheme.neutral[1000],
     },
     active: {
-      borderColor: lightTheme.success[500],
       boxShadow: `0 0 0 3px ${lightTheme.success[100]}`,
     },
   },
@@ -30,7 +29,6 @@ const outlinedLabelLightTheme = {
       color: lightTheme.danger[500],
     },
     active: {
-      borderColor: lightTheme.danger[500],
       boxShadow: `0 0 0 3px ${lightTheme.danger[100]}`,
     },
   },

@@ -13,10 +13,10 @@ const inputDarkTheme = {
   },
   valid: {
     base: {
+      color: darkTheme.neutral[1000],
       borderColor: darkTheme.success[300],
     },
     active: {
-      borderColor: darkTheme.success[300],
       boxShadow: `0 0 0 3px ${darkTheme.success[100]}`,
     },
   },
@@ -26,7 +26,6 @@ const inputDarkTheme = {
       borderColor: darkTheme.danger[300],
     },
     active: {
-      borderColor: darkTheme.danger[300],
       boxShadow: `0 0 0 3px ${darkTheme.danger[100]}`,
     },
   },

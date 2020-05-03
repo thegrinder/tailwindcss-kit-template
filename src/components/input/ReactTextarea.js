@@ -16,7 +16,7 @@ const Textarea = ({
       className={classNames({
         textarea: true,
         [className]: true,
-        [`${colorMode}:input`]: true,
+        [`${colorMode}:input-normal`]: !valid && !invalid,
         [`${colorMode}:input-valid`]: valid,
         [`${colorMode}:input-invalid`]: invalid,
       })}

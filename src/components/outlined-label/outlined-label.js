@@ -30,7 +30,7 @@ const outlinedLabelPlugin = ({ addComponents, e }) => {
   const [lightOutlinedLabelModes, darkOutlinedLabelModes] = Object.keys(
     outlinedLabelTheme
   ).map((colorMode) => ({
-    [`.${e(`${colorMode}:outlined-label`)}`]: {
+    [`.${e(`${colorMode}:outlined-label-normal`)}`]: {
       ...outlinedLabelTheme[colorMode].normal.base,
       'input:focus ~ &': outlinedLabelTheme[colorMode].normal.active,
       'input:checked ~ &': outlinedLabelTheme[colorMode].normal.checked,

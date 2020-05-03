@@ -39,7 +39,7 @@ const Input = ({
           input: true,
           'pl-8': !!startIcon,
           'pr-8': !!endIcon,
-          [`${colorMode}:input`]: true,
+          [`${colorMode}:input-normal`]: !valid && !invalid,
           [`${colorMode}:input-valid`]: valid,
           [`${colorMode}:input-invalid`]: invalid,
         })}

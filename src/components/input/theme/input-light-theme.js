@@ -13,10 +13,10 @@ const inputLightTheme = {
   },
   valid: {
     base: {
+      color: lightTheme.neutral[1000],
       borderColor: lightTheme.success[300],
     },
     active: {
-      borderColor: lightTheme.success[300],
       boxShadow: `0 0 0 3px ${lightTheme.success[100]}`,
     },
   },
@@ -26,7 +26,6 @@ const inputLightTheme = {
       borderColor: lightTheme.danger[300],
     },
     active: {
-      borderColor: lightTheme.danger[300],
       boxShadow: `0 0 0 3px ${lightTheme.danger[100]}`,
     },
   },
