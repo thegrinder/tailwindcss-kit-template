@@ -13,6 +13,10 @@ const outlinedLabelDarkTheme = {
       borderColor: darkTheme.primary[300],
       boxShadow: `0 0 0 3px ${darkTheme.primary[100]}`,
     },
+    disabled: {
+      borderColor: darkTheme.neutral[300],
+      color: darkTheme.neutral[300],
+    },
   },
   valid: {
     base: {
@@ -31,10 +35,6 @@ const outlinedLabelDarkTheme = {
     active: {
       boxShadow: `0 0 0 3px ${darkTheme.danger[100]}`,
     },
-  },
-  disabled: {
-    borderColor: darkTheme.neutral[300],
-    color: darkTheme.neutral[300],
   },
 };
 

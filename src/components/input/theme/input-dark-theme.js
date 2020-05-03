@@ -10,6 +10,11 @@ const inputDarkTheme = {
       borderColor: darkTheme.primary[300],
       boxShadow: `0 0 0 3px ${darkTheme.primary[100]}`,
     },
+    disabled: {
+      color: darkTheme.neutral[300],
+      backgroundColor: darkTheme.neutral[50],
+      borderColor: darkTheme.neutral[300],
+    },
   },
   valid: {
     base: {
@@ -28,11 +33,6 @@ const inputDarkTheme = {
     active: {
       boxShadow: `0 0 0 3px ${darkTheme.danger[100]}`,
     },
-  },
-  disabled: {
-    color: darkTheme.neutral[300],
-    backgroundColor: darkTheme.neutral[50],
-    borderColor: darkTheme.neutral[300],
   },
 };
 

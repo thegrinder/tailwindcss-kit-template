@@ -22,17 +22,17 @@ const inputPlugin = ({ addComponents, e }) => {
       [`.${e(`${colorMode}:input-normal`)}`]: {
         ...inputTheme[colorMode].normal.base,
         '&:focus': inputTheme[colorMode].normal.active,
-        '&:disabled': inputTheme[colorMode].disabled,
+        '&:disabled': inputTheme[colorMode].normal.disabled,
       },
       [`.${e(`${colorMode}:input-valid`)}`]: {
         ...inputTheme[colorMode].valid.base,
         '&:focus': inputTheme[colorMode].valid.active,
-        '&:disabled': inputTheme[colorMode].disabled,
+        '&:disabled': inputTheme[colorMode].normal.disabled,
       },
       [`.${e(`${colorMode}:input-invalid`)}`]: {
         ...inputTheme[colorMode].invalid.base,
         '&:focus': inputTheme[colorMode].invalid.active,
-        '&:disabled': inputTheme[colorMode].disabled,
+        '&:disabled': inputTheme[colorMode].normal.disabled,
       },
     })
   );

@@ -38,12 +38,12 @@ const checkboxPlugin = ({ addComponents, e }) => {
         ...checkboxTheme[colorMode].normal.base,
         '&:focus': checkboxTheme[colorMode].normal.active,
         '&:checked': checkboxTheme[colorMode].normal.checked,
-        '&:disabled': checkboxTheme[colorMode].disabled,
+        '&:disabled': checkboxTheme[colorMode].normal.disabled,
       },
       [`.${e(`${colorMode}:checkbox-invalid`)}`]: {
         ...checkboxTheme[colorMode].invalid.base,
         '&:focus': checkboxTheme[colorMode].invalid.active,
-        '&:disabled': checkboxTheme[colorMode].disabled,
+        '&:disabled': checkboxTheme[colorMode].normal.disabled,
       },
     })
   );

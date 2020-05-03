@@ -13,6 +13,10 @@ const outlinedLabelLightTheme = {
       borderColor: lightTheme.primary[300],
       boxShadow: `0 0 0 3px ${lightTheme.primary[100]}`,
     },
+    disabled: {
+      borderColor: lightTheme.neutral[300],
+      color: lightTheme.neutral[300],
+    },
   },
   valid: {
     base: {
@@ -31,10 +35,6 @@ const outlinedLabelLightTheme = {
     active: {
       boxShadow: `0 0 0 3px ${lightTheme.danger[100]}`,
     },
-  },
-  disabled: {
-    borderColor: lightTheme.neutral[300],
-    color: lightTheme.neutral[300],
   },
 };
 

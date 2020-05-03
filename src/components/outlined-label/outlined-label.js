@@ -37,7 +37,7 @@ const outlinedLabelPlugin = ({ addComponents, e }) => {
     },
     [`.${e(`${colorMode}:outlined-label-disabled`)}`]: outlinedLabelTheme[
       colorMode
-    ].disabled,
+    ].normal.disabled,
     [`.${e(`${colorMode}:outlined-label-valid`)}`]: {
       ...outlinedLabelTheme[colorMode].valid.base,
       'input:checked ~ &': outlinedLabelTheme[colorMode].valid.base,
