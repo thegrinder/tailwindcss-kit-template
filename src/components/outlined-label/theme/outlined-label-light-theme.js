@@ -1,4 +1,5 @@
 const { lightTheme } = require('../../../colors');
+const { createBoxShadow } = require('../../../helpers');
 
 const outlinedLabelLightTheme = {
   normal: {
@@ -11,7 +12,7 @@ const outlinedLabelLightTheme = {
     },
     active: {
       borderColor: lightTheme.primary[300],
-      boxShadow: `0 0 0 3px ${lightTheme.primary[100]}`,
+      boxShadow: createBoxShadow(lightTheme.primary[100]),
     },
     disabled: {
       borderColor: lightTheme.neutral[300],
@@ -24,7 +25,7 @@ const outlinedLabelLightTheme = {
       color: lightTheme.neutral[1000],
     },
     active: {
-      boxShadow: `0 0 0 3px ${lightTheme.success[100]}`,
+      boxShadow: createBoxShadow(lightTheme.success[100]),
     },
   },
   invalid: {
@@ -33,7 +34,7 @@ const outlinedLabelLightTheme = {
       color: lightTheme.danger[500],
     },
     active: {
-      boxShadow: `0 0 0 3px ${lightTheme.danger[100]}`,
+      boxShadow: createBoxShadow(lightTheme.danger[100]),
     },
   },
 };

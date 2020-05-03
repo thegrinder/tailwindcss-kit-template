@@ -1,4 +1,5 @@
 const { outlinedLabelTheme } = require('./theme/outlined-label-theme');
+const { createBoxShadow } = require('../../helpers');
 
 const outlinedLabelPlugin = ({ addComponents, e }) => {
   const outlinedLabelBase = {
@@ -21,7 +22,7 @@ const outlinedLabelPlugin = ({ addComponents, e }) => {
       borderWidth: '1px',
       borderStyle: 'solid',
       borderRadius: '.375rem',
-      boxShadow: '0 0 0 3px transparent',
+      boxShadow: createBoxShadow('transparent'),
       transition: '0.2s ease-in-out',
       transitionProperty: 'border, box-shadow',
     },

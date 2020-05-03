@@ -1,4 +1,5 @@
 const { lightTheme } = require('../../../colors');
+const { createBoxShadow } = require('../../../helpers');
 
 const checkboxLightTheme = {
   normal: {
@@ -7,7 +8,7 @@ const checkboxLightTheme = {
     },
     active: {
       borderColor: lightTheme.primary[500],
-      boxShadow: `0 0 0 3px ${lightTheme.primary[100]}`,
+      boxShadow: createBoxShadow(lightTheme.primary[100]),
     },
     checked: {
       borderColor: lightTheme.primary[500],
@@ -23,7 +24,7 @@ const checkboxLightTheme = {
       borderColor: lightTheme.danger[500],
     },
     active: {
-      boxShadow: `0 0 0 3px ${lightTheme.danger[100]}`,
+      boxShadow: createBoxShadow(lightTheme.danger[100]),
     },
   },
 };

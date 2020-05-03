@@ -1,4 +1,5 @@
 const { darkTheme } = require('../../../colors');
+const { createBoxShadow } = require('../../../helpers');
 
 const checkboxDarkTheme = {
   normal: {
@@ -7,7 +8,7 @@ const checkboxDarkTheme = {
     },
     active: {
       borderColor: darkTheme.primary[400],
-      boxShadow: `0 0 0 3px ${darkTheme.primary[100]}`,
+      boxShadow: createBoxShadow(darkTheme.primary[100]),
     },
     checked: {
       borderColor: darkTheme.primary[400],
@@ -23,7 +24,7 @@ const checkboxDarkTheme = {
       borderColor: darkTheme.danger[500],
     },
     active: {
-      boxShadow: `0 0 0 3px ${darkTheme.danger[100]}`,
+      boxShadow: createBoxShadow(darkTheme.danger[100]),
     },
   },
 };

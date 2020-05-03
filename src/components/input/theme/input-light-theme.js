@@ -1,4 +1,5 @@
 const { lightTheme } = require('../../../colors');
+const { createBoxShadow } = require('../../../helpers');
 
 const inputLightTheme = {
   normal: {
@@ -8,7 +9,7 @@ const inputLightTheme = {
     },
     active: {
       borderColor: lightTheme.primary[300],
-      boxShadow: `0 0 0 3px ${lightTheme.primary[100]}`,
+      boxShadow: createBoxShadow(lightTheme.primary[100]),
     },
     disabled: {
       color: lightTheme.neutral[300],
@@ -22,7 +23,7 @@ const inputLightTheme = {
       borderColor: lightTheme.success[300],
     },
     active: {
-      boxShadow: `0 0 0 3px ${lightTheme.success[100]}`,
+      boxShadow: createBoxShadow(lightTheme.success[100]),
     },
   },
   invalid: {
@@ -31,7 +32,7 @@ const inputLightTheme = {
       borderColor: lightTheme.danger[300],
     },
     active: {
-      boxShadow: `0 0 0 3px ${lightTheme.danger[100]}`,
+      boxShadow: createBoxShadow(lightTheme.danger[100]),
     },
   },
 };

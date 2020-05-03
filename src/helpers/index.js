@@ -39,8 +39,11 @@ const mapNestedThemeToClasses = (theme, callback) =>
 const alpha = (hslColor, num) =>
   hslColor.replace(')', `, ${num})`).replace('hsl', 'hsla');
 
+const createBoxShadow = (color) => `0 0 0 3px ${color}`;
+
 module.exports = {
   mapNestedThemeToClasses,
   mapFlatThemeToClasses,
   alpha,
+  createBoxShadow,
 };
