@@ -47,41 +47,44 @@ const Checkbox = ({
 ```
 
 <Playground>
-  <div>
-    <label htmlFor="simple-checkbox-unchecked" className="flex mb-4">
-      <Checkbox id="simple-checkbox-unchecked" className="mr-2" />
-      Unchecked
-    </label>
-  </div>
-  <div>
-    <label htmlFor="simple-checkbox-checked" className="flex mb-4">
-      <Checkbox id="simple-checkbox-checked" checked className="mr-2" />
-      Checked
-    </label>
-  </div>
-  <div>
-    <label htmlFor="simple-checkbox-disabled" className="flex mb-4">
-      <Checkbox id="simple-checkbox-disabled" disabled className="mr-2" />
-      Disabled
-    </label>
-  </div>
-  <div>
-    <label htmlFor="simple-checkbox-disabled-checked" className="flex mb-4">
-      <Checkbox
-        id="simple-checkbox-disabled-checked"
-        disabled
-        checked
-        className="mr-2"
-      />
-      Disabled and checked
-    </label>
-  </div>
-  <div>
-    <label htmlFor="simple-checkbox-invalid" className="flex mb-4">
-      <Checkbox id="simple-checkbox-invalid" invalid className="mr-2" />
-      Invalid
-    </label>
-  </div>
+  <label htmlFor="simple-checkbox-unchecked" className="flex mb-4">
+    <Checkbox id="simple-checkbox-unchecked" className="mr-2" />
+    Unchecked
+  </label>
+  <label htmlFor="simple-checkbox-checked" className="flex mb-4">
+    <Checkbox id="simple-checkbox-checked" checked className="mr-2" />
+    Checked
+  </label>
+  <label htmlFor="simple-checkbox-disabled" className="flex mb-4">
+    <Checkbox id="simple-checkbox-disabled" disabled className="mr-2" />
+    Disabled
+  </label>
+  <label htmlFor="simple-checkbox-disabled-checked" className="flex mb-4">
+    <Checkbox
+      id="simple-checkbox-disabled-checked"
+      disabled
+      checked
+      className="mr-2"
+    />
+    Disabled and checked
+  </label>
+  <label htmlFor="simple-checkbox-invalid" className="flex mb-4">
+    <Checkbox id="simple-checkbox-invalid" invalid className="mr-2" />
+    Invalid
+  </label>
+  <label htmlFor="simple-checkbox-valid" className="flex mb-4">
+    <Checkbox id="simple-checkbox-valid" valid className="mr-2" />
+    Valid
+  </label>
+  <label htmlFor="simple-checkbox-valid-checked" className="flex mb-4">
+    <Checkbox
+      id="simple-checkbox-valid-checked"
+      valid
+      checked
+      className="mr-2"
+    />
+    Valid and checked
+  </label>
 </Playground>
 
 ## Outlined checkbox
@@ -150,6 +153,19 @@ const OutlinedCheckbox = ({
     label="Invalid"
     name="outlined-checkbox-invalid"
     invalid
+    className="mb-4"
+  />
+  <OutlinedCheckbox
+    label="Valid"
+    name="outlined-checkbox-valid"
+    valid
+    className="mb-4"
+  />
+  <OutlinedCheckbox
+    label="Valid and checked"
+    name="outlined-checkbox-valid-checked"
+    valid
+    checked
     className="mb-4"
   />
 </Playground>

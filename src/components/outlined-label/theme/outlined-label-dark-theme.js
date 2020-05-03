@@ -21,7 +21,7 @@ const outlinedLabelDarkTheme = {
   },
   valid: {
     base: {
-      borderColor: darkTheme.success[500],
+      borderColor: darkTheme.success[300],
       color: darkTheme.neutral[1000],
     },
     active: {
@@ -30,7 +30,7 @@ const outlinedLabelDarkTheme = {
   },
   invalid: {
     base: {
-      borderColor: darkTheme.danger[500],
+      borderColor: darkTheme.danger[300],
       color: darkTheme.danger[500],
     },
     active: {

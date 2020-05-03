@@ -15,8 +15,19 @@ const checkboxLightTheme = {
       backgroundColor: lightTheme.primary[500],
     },
     disabled: {
-      backgroundColor: lightTheme.neutral[200],
+      backgroundColor: lightTheme.neutral[300],
       borderColor: lightTheme.neutral[300],
+    },
+  },
+  valid: {
+    base: {
+      borderColor: lightTheme.success[500],
+    },
+    active: {
+      boxShadow: createBoxShadow(lightTheme.success[100]),
+    },
+    checked: {
+      backgroundColor: lightTheme.success[500],
     },
   },
   invalid: {
