@@ -8,10 +8,12 @@ const Checkbox = ({
   disabled = false,
   className,
   checked,
+  id,
 }) => {
   const [colorMode] = useColorMode();
   return (
     <input
+      id={id}
       type="checkbox"
       checked={checked}
       disabled={disabled}

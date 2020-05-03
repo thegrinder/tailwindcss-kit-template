@@ -18,13 +18,19 @@ const outlinedLabelPlugin = ({ addComponents, e }) => {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
-      padding: '1rem',
+      padding: '1rem 1rem 1rem 3rem',
       borderWidth: '1px',
       borderStyle: 'solid',
       borderRadius: '.375rem',
       boxShadow: createBoxShadow('transparent'),
       transition: '0.2s ease-in-out',
       transitionProperty: 'border, box-shadow',
+      '&:hover': {
+        cursor: 'pointer',
+      },
+      'input:disabled ~ &': {
+        cursor: 'default',
+      },
     },
   };
 

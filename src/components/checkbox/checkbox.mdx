@@ -8,8 +8,9 @@ route: components/checkbox
 
 import { Playground } from 'docz';
 import Checkbox from './ReactCheckbox';
+import OutlinedCheckbox from './ReactOutlinedCheckbox';
 
-## Standalone checkbox
+## Simple checkbox
 
 ### React snippet
 
@@ -19,21 +20,25 @@ import classNames from 'classnames';
 import { useColorMode } from 'theme-ui';
 
 const Checkbox = ({
+  valid = false,
   invalid = false,
   disabled = false,
   className,
   checked,
+  id,
 }) => {
   const [colorMode] = useColorMode();
   return (
     <input
+      id={id}
       type="checkbox"
       checked={checked}
       disabled={disabled}
       className={classNames({
         checkbox: true,
         [className]: !!className,
-        [`${colorMode}:checkbox-normal`]: !invalid,
+        [`${colorMode}:checkbox-normal`]: !valid && !invalid,
+        [`${colorMode}:checkbox-valid`]: valid,
         [`${colorMode}:checkbox-invalid`]: invalid,
       })}
     />
@@ -42,9 +47,109 @@ const Checkbox = ({
 ```
 
 <Playground>
-  <Checkbox className="mr-4" />
-  <Checkbox checked className="mr-4" />
-  <Checkbox disabled className="mr-4" />
-  <Checkbox disabled checked className="mr-4" />
-  <Checkbox invalid className="mr-4" />
+  <div>
+    <label htmlFor="simple-checkbox-unchecked" className="flex mb-4">
+      <Checkbox id="simple-checkbox-unchecked" className="mr-2" />
+      Unchecked
+    </label>
+  </div>
+  <div>
+    <label htmlFor="simple-checkbox-checked" className="flex mb-4">
+      <Checkbox id="simple-checkbox-checked" checked className="mr-2" />
+      Checked
+    </label>
+  </div>
+  <div>
+    <label htmlFor="simple-checkbox-disabled" className="flex mb-4">
+      <Checkbox id="simple-checkbox-disabled" disabled className="mr-2" />
+      Disabled
+    </label>
+  </div>
+  <div>
+    <label htmlFor="simple-checkbox-disabled-checked" className="flex mb-4">
+      <Checkbox
+        id="simple-checkbox-disabled-checked"
+        disabled
+        checked
+        className="mr-2"
+      />
+      Disabled and checked
+    </label>
+  </div>
+  <div>
+    <label htmlFor="simple-checkbox-invalid" className="flex mb-4">
+      <Checkbox id="simple-checkbox-invalid" invalid className="mr-2" />
+      Invalid
+    </label>
+  </div>
+</Playground>
+
+## Outlined checkbox
+
+### React snippet
+
+```jsx
+import React from 'react';
+import OutlinedLabel from '../outlined-label/ReactOutlinedLabel';
+import Checkbox from './ReactCheckbox';
+
+const OutlinedCheckbox = ({
+  invalid = false,
+  valid = false,
+  disabled = false,
+  checked,
+  name,
+  label,
+  className,
+}) => (
+  <OutlinedLabel
+    htmlFor={name}
+    invalid={invalid}
+    valid={valid}
+    label={label}
+    className={className}
+    disabled={disabled}
+  >
+    <Checkbox
+      checked={checked}
+      valid={valid}
+      invalid={invalid}
+      disabled={disabled}
+      id={name}
+    />
+  </OutlinedLabel>
+);
+```
+
+<Playground>
+  <OutlinedCheckbox
+    label="Unchecked"
+    name="outlined-checkbox-unchecked"
+    className="mb-4"
+  />
+  <OutlinedCheckbox
+    label="Checked"
+    name="outlined-checkbox-checked"
+    checked
+    className="mb-4"
+  />
+  <OutlinedCheckbox
+    label="Disabled"
+    name="outlined-checkbox-disabled"
+    disabled
+    className="mb-4"
+  />
+  <OutlinedCheckbox
+    label="Disabled and checked"
+    name="outlined-checkbox-disabled-checked"
+    disabled
+    checked
+    className="mb-4"
+  />
+  <OutlinedCheckbox
+    label="Invalid"
+    name="outlined-checkbox-invalid"
+    invalid
+    className="mb-4"
+  />
 </Playground>

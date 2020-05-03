@@ -6,6 +6,7 @@ const OutlinedLabel = ({
   disabled = false,
   valid = false,
   invalid = false,
+  htmlFor,
   className,
   children,
   label,
@@ -15,6 +16,7 @@ const OutlinedLabel = ({
     <div className={classNames('outlined-label-wrapper', className)}>
       {children}
       <label
+        htmlFor={htmlFor}
         className={classNames({
           'outlined-label': true,
           [`${colorMode}:outlined-label-normal`]:
