@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+// eslint-disable-next-line import/extensions
 import { darkTheme, lightTheme } from '../src/colors';
 
 const dark = {
