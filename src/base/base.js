@@ -15,8 +15,12 @@ const basePlugin = ({ addBase, config }) => {
       width: '100%',
     },
     html: {
+      boxSizing: 'border-box',
       width: '100%',
       height: '100%',
+    },
+    '*, *:before, *:after': {
+      boxSizing: 'inherit',
     },
     body: {
       fontFamily: `'Inter var', sans-serif`,
