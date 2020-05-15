@@ -74,7 +74,7 @@ const Modal = ({ type, isOpen, onRequestClose, children }) => {
         <div className="mb-4">
           <Button onClick={openModal}>open default modal</Button>
           <Modal type="default" isOpen={isOpen} onRequestClose={closeModal}>
-            <div className="pa-8">
+            <div className="p-8">
               <Button onClick={closeModal}>Close modal</Button>
             </div>
           </Modal>
@@ -89,7 +89,7 @@ const Modal = ({ type, isOpen, onRequestClose, children }) => {
         <>
           <Button onClick={openModal}>open full screen modal</Button>
           <Modal type="screen" isOpen={isOpen} onRequestClose={closeModal}>
-            <div className="pa-8">
+            <div className="p-8">
               <Button onClick={closeModal}>Close modal</Button>
             </div>
           </Modal>

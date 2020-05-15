@@ -1,7 +1,7 @@
 const spacingPlugin = ({ addUtilities, config }) => {
   const spacingConfig = config('theme.spacing');
   const marginUtilities = Object.keys(spacingConfig).map((spacingKey) => ({
-    [`.ma-${spacingKey}`]: {
+    [`.m-${spacingKey}`]: {
       margin: spacingConfig[spacingKey],
     },
     [`.mv-${spacingKey}`]: {
@@ -36,7 +36,7 @@ const spacingPlugin = ({ addUtilities, config }) => {
   );
 
   const paddingUtilities = Object.keys(spacingConfig).map((spacingKey) => ({
-    [`.pa-${spacingKey}`]: {
+    [`.p-${spacingKey}`]: {
       padding: spacingConfig[spacingKey],
     },
     [`.pv-${spacingKey}`]: {

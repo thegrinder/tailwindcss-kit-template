@@ -41,8 +41,8 @@ const Card = ({ elevation = 1, className, children, ...rest }) => {
   {() => {
     const [colorMode] = useColorMode();
     return (
-      <div className={`${colorMode}:bg-neutral-0 pa-8`}>
-        <Card elevation={1} className="pa-8 mb-8">
+      <div className={`${colorMode}:bg-neutral-0 p-8`}>
+        <Card elevation={1} className="p-8 mb-8">
           <div className="flex -mh-2">
             <div className="col-auto ph-2">
               <Button emphasis="medium">primary</Button>
@@ -52,7 +52,7 @@ const Card = ({ elevation = 1, className, children, ...rest }) => {
             </div>
           </div>
         </Card>
-        <Card elevation={2} className="pa-8">
+        <Card elevation={2} className="p-8">
           <div className="flex -mh-2">
             <div className="col-auto ph-2">
               <Button emphasis="medium">primary</Button>
