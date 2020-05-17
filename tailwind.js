@@ -2,7 +2,7 @@
 const base = require('./src/base/base');
 
 // utilities
-const backgroundColor = require('./src/utilities/background-color/background-color');
+const backgroundColor = require('./src/color-utilities/background-color/background-color');
 const border = require('./src/utilities/border');
 const borderRadius = require('./src/utilities/border-radius');
 const custom = require('./src/utilities/custom');
@@ -11,10 +11,9 @@ const flexGrid = require('./src/utilities/flex-grid');
 const fontWeight = require('./src/utilities/font-weight');
 const spacing = require('./src/utilities/spacing');
 const textAlign = require('./src/utilities/text-align');
-const textColor = require('./src/utilities/text-color/text-color');
+const textColor = require('./src/color-utilities/text-color/text-color');
 
 // components
-const outlinedLabel = require('./src/components/outlined-label/outlined-label');
 const button = require('./src/components/button/button');
 const card = require('./src/components/card/card');
 const checkbox = require('./src/components/checkbox/checkbox');
@@ -24,6 +23,7 @@ const input = require('./src/components/input/input');
 const link = require('./src/components/link/link');
 const loadingBar = require('./src/components/loading-bar/loading-bar');
 const modal = require('./src/components/modal/modal');
+const outlinedLabel = require('./src/components/outlined-label/outlined-label');
 const spinner = require('./src/components/spinner/spinner');
 
 module.exports = {

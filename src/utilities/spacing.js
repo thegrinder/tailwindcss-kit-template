@@ -4,11 +4,11 @@ const spacingPlugin = ({ addUtilities, config }) => {
     [`.m-${spacingKey}`]: {
       margin: spacingConfig[spacingKey],
     },
-    [`.mv-${spacingKey}`]: {
+    [`.my-${spacingKey}`]: {
       marginTop: spacingConfig[spacingKey],
       marginBottom: spacingConfig[spacingKey],
     },
-    [`.mh-${spacingKey}`]: {
+    [`.mx-${spacingKey}`]: {
       marginRight: spacingConfig[spacingKey],
       marginLeft: spacingConfig[spacingKey],
     },
@@ -28,7 +28,7 @@ const spacingPlugin = ({ addUtilities, config }) => {
 
   const negativeMarginUtilities = Object.keys(spacingConfig).map(
     (spacingKey) => ({
-      [`.-mh-${spacingKey}`]: {
+      [`.-mx-${spacingKey}`]: {
         marginRight: `-${spacingConfig[spacingKey]}`,
         marginLeft: `-${spacingConfig[spacingKey]}`,
       },
@@ -39,11 +39,11 @@ const spacingPlugin = ({ addUtilities, config }) => {
     [`.p-${spacingKey}`]: {
       padding: spacingConfig[spacingKey],
     },
-    [`.pv-${spacingKey}`]: {
+    [`.py-${spacingKey}`]: {
       paddingTop: spacingConfig[spacingKey],
       paddingBottom: spacingConfig[spacingKey],
     },
-    [`.ph-${spacingKey}`]: {
+    [`.px-${spacingKey}`]: {
       paddingRight: spacingConfig[spacingKey],
       paddingLeft: spacingConfig[spacingKey],
     },

@@ -5,7 +5,7 @@ menu: Utilities
 
 # Utilities
 
-### Tailwindcss utilities
+## Tailwindcss utilities
 
 These are handpicked tailwindcss utilities using default theme.
 Please refer to tailwindcss documentation for more information.
@@ -33,62 +33,135 @@ Please refer to tailwindcss documentation for more information.
 - position
 - zIndex
 
-### Tailwindcss utilities with custom theme
+## Tailwindcss utilities with custom theme
 
 These are built in tailwindcss utilities following the same naming but based on a modified theme.
 
-#### width
+### width
 
-- spacing modifiers
-- auto: `auto`
-- full: `100%`
-- screen: `100vw`
+Apart from the widths corresponding to the spacing scale, these modifier/values are available:
 
-#### line height
+| Modifier | Value   |
+| -------- | ------- |
+| auto     | `auto`  |
+| full     | `100%`  |
+| screen   | `100vw` |
 
-- 0: `0`
-- none: `1`
-- tight: `1.25`
-- snug: `1.375`
-- normal: `1.5`
-- relaxed: `1.625`
-- loose: `2`
+### line height
 
-#### font size (responsive)
+| Modifier | Value   |
+| -------- | ------- |
+| 0        | `0`     |
+| none     | `1`     |
+| tight    | `1.25`  |
+| snug     | `1.375` |
+| normal   | `1.5`   |
+| relaxed  | `1.625` |
+| loose    | `2`     |
 
-- xs: `0.75rem`
-- sm: `0.875rem`
-- base: `1rem`
-- lg: `1.125rem`
-- xl: `1.25rem`
-- 2xl: `1.5rem`
-- 3xl: `1.875rem`
-- 4xl: `2.25rem`
-- 5xl: `3rem`
-- 6xl: `4rem`
+### font size (responsive)
 
-#### screens
+| Modifier | Value      |
+| -------- | ---------- |
+| xs       | `0.75rem`  |
+| sm       | `0.875rem` |
+| base     | `1rem`     |
+| lg       | `1.125rem` |
+| xl       | `1.25rem`  |
+| 2xl      | `1.5rem`   |
+| 3xl      | `1.875rem` |
+| 4xl      | `2.25rem`  |
+| 5xl      | `3rem`     |
+| 6xl      | `4rem`     |
 
-- sm: `576px`
-- md: `768px`
-- lg: `992px`
-- xl: `1200px`
+### screens
 
-#### inset
+| Modifier | Value    |
+| -------- | -------- |
+| sm       | `576px`  |
+| md       | `768px`  |
+| lg       | `992px`  |
+| xl       | `1200px` |
 
-- 0: `0`
-- 1: `0.25rem`
-- 2: `0.5rem`
-- 3: `0.75rem`
-- 4: `1rem`
+### inset
 
-### Custom tailwindcss utilities
+| Modfier | Value     |
+| ------- | --------- |
+| 0       | `0`       |
+| 1       | `0.25rem` |
+| 2       | `0.5rem`  |
+| 3       | `0.75rem` |
+| 4       | `1rem`    |
+
+## Custom tailwindcss utilities
 
 These utilities have been created because of personal naming preference or to avoid unnecessary class names creation.
 
-#### font weight
+### font weight
 
-- 400: `400`
-- 500: `500`
-- 600: `600`
-- 700: `700`
+| Class   | Properties          |
+| ------- | ------------------- |
+| .fw-400 | `font-weight: 400;` |
+| .fw-500 | `font-weight: 500;` |
+| .fw-600 | `font-weight: 600;` |
+| .fw-700 | `font-weight: 700;` |
+
+### border radius
+
+| Class       | Properties                 |
+| ----------- | -------------------------- |
+| .br-none    | `border-radius: 0;`        |
+| .br-sm      | `border-radius: 0.125rem;` |
+| .br-default | `border-radius: 0.25rem;`  |
+| .br-md      | `border-radius: 0.375rem;` |
+| .br-lg      | `border-radius: 0.5rem;`   |
+| .br-full    | `border-radius: 9999px;`   |
+
+### border
+
+| Class | Properties                                              |
+| ----- | ------------------------------------------------------- |
+| .bb   | `border-bottom-width: 1px; border-bottom-style: solid;` |
+| .bt   | `border-top-width: 1px; border-top-style: solid;`       |
+| .bl   | `border-left-width: 1px; border-left-style: solid;`     |
+| .br   | `border-right-width: 1px; border-right-style: solid;`   |
+| .ba   | `border-width: 1px; border-style: solid;`               |
+
+### display
+
+| Class | Properties               |
+| ----- | ------------------------ |
+| .dn   | `display: none;`         |
+| .di   | `display: inline;`       |
+| .db   | `display: block;`        |
+| .dib  | `display: inline-block;` |
+
+### text-align
+
+| Class | Properties               |
+| ----- | ------------------------ |
+| .tl   | `text-align: left;`      |
+| .tr   | `text-align: right;`     |
+| .tc   | `text-align: center;`    |
+| .tj   | `text-align: justified;` |
+
+### flex grid
+
+Inspired by bootstrap 12 column flexbox grid.
+
+Breakpoint modifiers corresponding to screens theme config:
+
+- sm
+- md
+- lg
+- xl
+
+Column modifiers
+
+- 1 - 12
+- auto
+
+Example classes:
+
+- `class="col col-auto"`
+- `class="col col-12 sm:col-6 md:col-4 lg:col-3 xl:col-2"`
