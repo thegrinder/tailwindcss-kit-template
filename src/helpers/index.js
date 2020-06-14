@@ -41,9 +41,25 @@ const alpha = (hslColor, num) =>
 
 const createBoxShadow = (color) => `0 0 0 3px ${color}`;
 
+const toDashCase = (camel) =>
+  camel.replace(/[A-Z]/g, (m) => `-${m.toLowerCase()}`);
+
+const convertToDocsTable = (stylesObj) =>
+  Object.keys(stylesObj).reduce(
+    (acc, className) => ({
+      ...acc,
+      [className.replace('.', '')]: Object.keys(stylesObj[className]).map(
+        (property) =>
+          `${toDashCase(property)}: ${stylesObj[className][property]}`
+      ),
+    }),
+    {}
+  );
+
 module.exports = {
   mapNestedThemeToClasses,
   mapFlatThemeToClasses,
   alpha,
   createBoxShadow,
+  convertToDocsTable,
 };

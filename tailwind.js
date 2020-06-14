@@ -3,7 +3,7 @@ const base = require('./src/base/base');
 
 // utilities
 const backgroundColor = require('./src/color-utilities/background-color/background-color');
-const border = require('./src/utilities/border');
+const { border } = require('./src/utilities/border/border');
 const borderRadius = require('./src/utilities/border-radius/border-radius');
 const custom = require('./src/utilities/custom');
 const display = require('./src/utilities/display');
