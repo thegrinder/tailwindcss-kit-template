@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     'import/no-extraneous-dependencies': 'off',
     'react/prop-types': 'off',
+    'import/prefer-default-export': 'off',
     'prettier/prettier': [
       'error',
       {
