@@ -4,6 +4,8 @@ menu: Color utilities
 route: color-utilities/text-color
 ---
 
+# Text color
+
 import { Playground } from 'docz';
 import { useColorMode } from 'theme-ui';
 import { colors } from '../../colors';
@@ -22,9 +24,12 @@ import { mapNestedThemeToClasses } from '../../helpers';
   {() => {
     const [colorMode] = useColorMode();
     return Object.keys(colors[colorMode]).map((variant) => (
-      <div className="mb-12">
+      <div key={variant} className="mb-12">
         {Object.keys(colors[colorMode][variant]).map((num) => (
-          <p className={`${colorMode}:text-${variant}-${num}`}>
+          <p
+            key={`${colorMode}-${variant}-${num}`}
+            className={`${colorMode}:text-${variant}-${num}`}
+          >
             The spectacle before us was sublime.
           </p>
         ))}

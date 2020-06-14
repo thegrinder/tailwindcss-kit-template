@@ -4,7 +4,7 @@ const base = require('./src/base/base');
 // utilities
 const backgroundColor = require('./src/color-utilities/background-color/background-color');
 const border = require('./src/utilities/border');
-const borderRadius = require('./src/utilities/border-radius');
+const borderRadius = require('./src/utilities/border-radius/border-radius');
 const custom = require('./src/utilities/custom');
 const display = require('./src/utilities/display');
 const flexGrid = require('./src/utilities/flex-grid');

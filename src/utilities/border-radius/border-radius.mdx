@@ -1,0 +1,21 @@
+---
+name: Border radius
+menu: Utilities
+route: utilities/border-radius
+---
+
+# Border radius
+
+import { Playground } from 'docz';
+import { theme } from 'tailwindcss/stubs/defaultConfig.stub';
+import { ClassNamesTable } from '../../docz-components';
+
+<ClassNamesTable
+  data={Object.keys(theme.borderRadius).reduce(
+    (acc, size) => ({
+      ...acc,
+      [`br-${size}`]: [`border-radius: ${theme.borderRadius[size]}`],
+    }),
+    {}
+  )}
+/>
