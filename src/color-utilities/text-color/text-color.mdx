@@ -7,6 +7,16 @@ route: color-utilities/text-color
 import { Playground } from 'docz';
 import { useColorMode } from 'theme-ui';
 import { colors } from '../../colors';
+import { ClassNamesTable } from '../../docz-components';
+import { mapNestedThemeToClasses } from '../../helpers';
+
+<ClassNamesTable
+  data={mapNestedThemeToClasses(colors, (colorMode, variant, num) => ({
+    [`${colorMode}:text-${variant}-${num}`]: [
+      `color: ${colors[colorMode][variant][num]}`,
+    ],
+  }))}
+/>
 
 <Playground>
   {() => {

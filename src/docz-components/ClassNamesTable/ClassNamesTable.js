@@ -7,7 +7,7 @@ export const ClassNamesTable = ({ data }) => {
   const [colorMode] = useColorMode();
   return (
     <div
-      className="max-w-3xl overflow-auto mt-12 mb-24"
+      className="max-w-2xl overflow-auto mt-12 mb-24"
       style={{
         maxHeight: '500px',
         border: `1px solid ${colors[colorMode].neutral[100]}`,
@@ -21,14 +21,14 @@ export const ClassNamesTable = ({ data }) => {
           `${colorMode}:bg-neutral-50`
         )}
       >
-        <div className="col col-6 px-4">
+        <div className="col col-5 px-4">
           <span
             className={classNames(`${colorMode}:text-neutral-700`, 'fw-700')}
           >
             Class
           </span>
         </div>
-        <div className="col col-6 px-4">
+        <div className="col col-7 px-4">
           <span
             className={classNames(`${colorMode}:text-neutral-700`, 'fw-700')}
           >
@@ -39,7 +39,7 @@ export const ClassNamesTable = ({ data }) => {
       {Object.keys(data).map((className) => (
         <Fragment key={className}>
           <div className="flex flex-row py-2">
-            <div className="col col-6 px-4">
+            <div className="col col-5 px-4">
               <span
                 className={classNames(
                   `${colorMode}:text-neutral-600`,
@@ -49,7 +49,7 @@ export const ClassNamesTable = ({ data }) => {
                 .{className}
               </span>
             </div>
-            <div className="col col-6 px-4">
+            <div className="col col-7 px-4">
               {data[className].map((property, index) => (
                 <span
                   key={`${className}-${index}`}
@@ -59,7 +59,7 @@ export const ClassNamesTable = ({ data }) => {
                     'db'
                   )}
                 >
-                  {property}
+                  {property};
                 </span>
               ))}
             </div>
