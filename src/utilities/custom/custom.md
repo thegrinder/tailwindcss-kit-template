@@ -1,0 +1,13 @@
+---
+name: Custom
+menu: Utilities
+route: utilities/custom
+---
+
+# Custom
+
+import { ClassNamesTable } from '../../docz-components';
+import { convertToDocsTable } from '../../helpers';
+import { customClassNames } from './custom';
+
+<ClassNamesTable data={convertToDocsTable(customClassNames)} />
