@@ -6,14 +6,16 @@ route: utilities/border-radius
 
 # Border radius
 
-import { theme } from 'tailwindcss/stubs/defaultConfig.stub';
+import resolveConfig from 'tailwindcss/resolveConfig';
 import { ClassNamesTable } from '../../docz-components';
 
 <ClassNamesTable
-  data={Object.keys(theme.borderRadius).reduce(
+  data={Object.keys(resolveConfig().theme.borderRadius).reduce(
     (acc, size) => ({
       ...acc,
-      [`br-${size}`]: [`border-radius: ${theme.borderRadius[size]}`],
+      [`br-${size}`]: [
+        `border-radius: ${resolveConfig().theme.borderRadius[size]}`,
+      ],
     }),
     {}
   )}
