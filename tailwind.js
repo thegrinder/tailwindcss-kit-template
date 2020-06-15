@@ -15,7 +15,7 @@ const { custom } = require('./src/utilities/custom/custom');
 const { display } = require('./src/utilities/display/display');
 const { flexGrid } = require('./src/utilities/flex-grid/flex-grid');
 const { fontWeight } = require('./src/utilities/font-weight/font-weight');
-const spacing = require('./src/utilities/spacing');
+const { spacing } = require('./src/utilities/spacing/spacing');
 const textAlign = require('./src/utilities/text-align');
 const textColor = require('./src/color-utilities/text-color/text-color');
 
