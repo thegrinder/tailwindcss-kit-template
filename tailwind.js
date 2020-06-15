@@ -1,3 +1,9 @@
+// config
+const {
+  fontWeightsTheme,
+} = require('./src/utilities/font-weight/font-weight-theme');
+const { flexGridTheme } = require('./src/utilities/flex-grid/flex-grid-theme');
+
 // base
 const base = require('./src/base/base');
 
@@ -8,7 +14,7 @@ const borderRadius = require('./src/utilities/border-radius/border-radius');
 const { custom } = require('./src/utilities/custom/custom');
 const { display } = require('./src/utilities/display/display');
 const { flexGrid } = require('./src/utilities/flex-grid/flex-grid');
-const fontWeight = require('./src/utilities/font-weight');
+const { fontWeight } = require('./src/utilities/font-weight/font-weight');
 const spacing = require('./src/utilities/spacing');
 const textAlign = require('./src/utilities/text-align');
 const textColor = require('./src/color-utilities/text-color/text-color');
@@ -28,9 +34,7 @@ const spinner = require('./src/components/spinner/spinner');
 
 module.exports = {
   theme: {
-    grid: {
-      columns: 12,
-    },
+    grid: flexGridTheme,
     inset: {
       0: '0',
       1: '0.25rem',
@@ -44,12 +48,7 @@ module.exports = {
       lg: '992px',
       xl: '1200px',
     },
-    fontWeights: {
-      400: 400,
-      500: 500,
-      600: 600,
-      700: 700,
-    },
+    fontWeights: fontWeightsTheme,
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
