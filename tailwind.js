@@ -70,12 +70,6 @@ module.exports = {
       relaxed: '1.625',
       loose: '2',
     },
-    width: (theme) => ({
-      auto: 'auto',
-      ...theme('spacing'),
-      full: '100%',
-      screen: '100vw',
-    }),
   },
   variants: {
     alignContent: [],
