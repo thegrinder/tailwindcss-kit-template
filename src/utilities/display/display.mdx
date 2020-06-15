@@ -1,0 +1,13 @@
+---
+name: Display
+menu: Utilities
+route: utilities/display
+---
+
+# Display
+
+import { ClassNamesTable } from '../../docz-components';
+import { convertToDocsTable } from '../../helpers';
+import { displayClassNames } from './display';
+
+<ClassNamesTable data={convertToDocsTable(displayClassNames)} />
