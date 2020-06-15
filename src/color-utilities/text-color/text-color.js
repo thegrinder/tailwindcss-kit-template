@@ -1,7 +1,7 @@
 const { mapNestedThemeToClasses } = require('../../helpers');
 const { colors } = require('../../colors');
 
-const textColorPlugin = ({ addUtilities, e }) => {
+const textColor = ({ addUtilities, e }) => {
   const textColorModes = mapNestedThemeToClasses(
     colors,
     (colorMode, variant, num) => ({
@@ -14,4 +14,4 @@ const textColorPlugin = ({ addUtilities, e }) => {
   addUtilities(textColorModes);
 };
 
-module.exports = textColorPlugin;
+module.exports = { textColor };

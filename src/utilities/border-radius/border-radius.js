@@ -1,4 +1,4 @@
-const borderRadiusPlugin = ({ addUtilities, config }) => {
+const borderRadius = ({ addUtilities, config }) => {
   const borderRadiusConfig = config('theme.borderRadius');
   const utilities = Object.keys(borderRadiusConfig).map((sizeKey) => ({
     [`.br-${sizeKey}`]: { borderRadius: borderRadiusConfig[sizeKey] },
@@ -6,4 +6,4 @@ const borderRadiusPlugin = ({ addUtilities, config }) => {
   addUtilities(utilities);
 };
 
-module.exports = borderRadiusPlugin;
+module.exports = { borderRadius };
