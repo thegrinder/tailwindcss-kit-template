@@ -1,0 +1,14 @@
+---
+name: Flex grid
+menu: Utilities
+route: utilities/flex-grid
+---
+
+# Flex grid
+
+import { Playground } from 'docz';
+import { ClassNamesTable } from '../../docz-components';
+import { convertToDocsTable } from '../../helpers';
+import { getFlexGridClassNames } from './flex-grid';
+
+<ClassNamesTable data={convertToDocsTable(getFlexGridClassNames(12))} />
