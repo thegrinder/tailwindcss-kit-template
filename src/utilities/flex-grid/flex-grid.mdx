@@ -10,5 +10,8 @@ import { Playground } from 'docz';
 import { ClassNamesTable } from '../../docz-components';
 import { convertToDocsTable } from '../../helpers';
 import { getFlexGridClassNames } from './flex-grid';
+import { flexGridTheme } from './flex-grid-theme';
 
-<ClassNamesTable data={convertToDocsTable(getFlexGridClassNames(12))} />
+<ClassNamesTable
+  data={convertToDocsTable(getFlexGridClassNames(flexGridTheme.columns))}
+/>
