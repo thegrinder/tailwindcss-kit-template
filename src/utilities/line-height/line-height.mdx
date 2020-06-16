@@ -1,0 +1,25 @@
+---
+name: Line height
+menu: Utilities
+route: utilities/line-height
+---
+
+# Line height
+
+import { ClassNamesTable } from '../../docz-components';
+import { convertToDocsTable } from '../../helpers';
+import { lineHeightTheme } from './line-height-theme';
+
+<ClassNamesTable
+  data={convertToDocsTable(
+    Object.keys(lineHeightTheme).reduce(
+      (acc, key) => ({
+        ...acc,
+        [`leading-${key}`]: {
+          lineHeight: lineHeightTheme[key],
+        },
+      }),
+      {}
+    )
+  )}
+/>
