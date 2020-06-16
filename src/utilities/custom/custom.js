@@ -15,7 +15,7 @@ const customClassNames = {
 };
 
 const custom = ({ addUtilities }) => {
-  addUtilities([customClassNames]);
+  addUtilities(customClassNames);
 };
 
 module.exports = {

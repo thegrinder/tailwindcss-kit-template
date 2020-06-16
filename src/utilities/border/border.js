@@ -22,7 +22,7 @@ const borderClassNames = {
 };
 
 const border = ({ addUtilities }) => {
-  addUtilities([borderClassNames]);
+  addUtilities(borderClassNames);
 };
 
 module.exports = {

@@ -6,7 +6,7 @@ const displayClassNames = {
 };
 
 const display = ({ addUtilities }) => {
-  addUtilities([displayClassNames]);
+  addUtilities(displayClassNames);
 };
 
 module.exports = {

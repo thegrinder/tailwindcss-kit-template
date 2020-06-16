@@ -9,7 +9,7 @@ const fontWeightClassNames = Object.keys(fontWeightTheme).reduce(
 );
 
 const fontWeight = ({ addUtilities }) => {
-  addUtilities([fontWeightClassNames]);
+  addUtilities(fontWeightClassNames);
 };
 
 module.exports = {

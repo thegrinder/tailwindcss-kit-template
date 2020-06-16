@@ -44,7 +44,7 @@ const flexGrid = ({ addUtilities, config }) => {
   const columns = config('theme.grid.columns');
   const flexGridClassNames = getFlexGridClassNames(columns);
 
-  addUtilities([flexGridClassNames], ['responsive']);
+  addUtilities(flexGridClassNames, ['responsive']);
 };
 
 module.exports = {
