@@ -1,0 +1,25 @@
+---
+name: Font size
+menu: Utilities
+route: utilities/font-size
+---
+
+# Font size
+
+import { ClassNamesTable } from '../../docz-components';
+import { convertToDocsTable } from '../../helpers';
+import { fontSizeTheme } from './font-size-theme';
+
+<ClassNamesTable
+  data={convertToDocsTable(
+    Object.keys(fontSizeTheme).reduce(
+      (acc, key) => ({
+        ...acc,
+        [`text-${key}`]: {
+          fontSize: fontSizeTheme[key],
+        },
+      }),
+      {}
+    )
+  )}
+/>

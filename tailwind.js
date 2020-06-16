@@ -3,6 +3,7 @@ const {
   fontWeightsTheme,
 } = require('./src/utilities/font-weight/font-weight-theme');
 const { flexGridTheme } = require('./src/utilities/flex-grid/flex-grid-theme');
+const { fontSizeTheme } = require('./src/utilities/font-size/font-size-theme');
 
 // base
 const base = require('./src/base/base');
@@ -51,18 +52,7 @@ module.exports = {
       xl: '1200px',
     },
     fontWeights: fontWeightsTheme,
-    fontSize: {
-      xs: '0.75rem',
-      sm: '0.875rem',
-      base: '1rem',
-      lg: '1.125rem',
-      xl: '1.25rem',
-      '2xl': '1.5rem',
-      '3xl': '1.875rem',
-      '4xl': '2.25rem',
-      '5xl': '3rem',
-      '6xl': '4rem',
-    },
+    fontSize: fontSizeTheme,
     lineHeight: {
       0: 0,
       none: '1',
