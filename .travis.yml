@@ -1,0 +1,18 @@
+language: node_js
+
+node_js:
+  - 12
+
+jobs:
+  include:
+    - stage: docs
+      script:
+        - npm run docz:build
+      deploy:
+        provider: pages
+        skip-cleanup: true
+        github-token: $GH_TOKEN
+        keep-history: true
+        local-dir: .docz/dist
+        on:
+          branch: master
