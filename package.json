@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-kit-template",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "Set of helpful tailwindcss utilities and components",
   "keywords": [
     "tailwind",
@@ -18,7 +18,8 @@
     "docz:dev": "docz dev",
     "docz:build": "docz build",
     "docz:serve": "docz build && docz serve",
-    "lint": "eslint './src/**/*.js' --fix"
+    "lint": "eslint './src/**/*.js' --fix",
+    "semantic-release": "semantic-release"
   },
   "author": "Pawel Szczepkowski",
   "license": "MIT",
@@ -30,7 +31,8 @@
     "eslint-plugin-react": "^7.20.0",
     "gatsby-plugin-postcss": "^2.3.4",
     "prettier": "^2.0.5",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.4.6",
+    "semantic-release": "^17.0.8"
   },
   "dependencies": {
     "classnames": "^2.2.6",
