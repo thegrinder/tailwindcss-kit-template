@@ -12,7 +12,7 @@ const {
 const base = require('./src/base/base');
 
 // variants
-const { screensTheme } = require('./src/variants/responsiveness');
+const { screensTheme } = require('./src/variants/responsiveness/screens-theme');
 
 // utilities
 const {

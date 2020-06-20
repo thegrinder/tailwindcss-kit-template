@@ -1,0 +1,20 @@
+---
+name: Responsiveness
+menu: Variants
+route: variants/responsiveness
+---
+
+# Responsiveness
+
+import { ResponsivenessTable } from '../../docz-components';
+import { screensTheme } from './screens-theme';
+
+<ResponsivenessTable
+  data={Object.keys(screensTheme).reduce(
+    (acc, modifier) => ({
+      ...acc,
+      [modifier]: `@media (min-width :${screensTheme[modifier]}) { ... }`,
+    }),
+    {}
+  )}
+/>
