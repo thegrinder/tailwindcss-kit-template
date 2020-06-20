@@ -5,9 +5,17 @@ node_js:
 
 jobs:
   include:
+    - stage: release
+      node_js: lts/*
+      install:
+        - npm ci
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npm run semantic-release
     - stage: docs
       script:
-        - npm ci
         - npm run docz:build
       deploy:
         provider: pages
