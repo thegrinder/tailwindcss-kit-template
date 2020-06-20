@@ -18,7 +18,7 @@ export const ClassNamesTable = ({ data }) => {
           'flex',
           'flex-row',
           'py-2',
-          `${colorMode}:bg-neutral-50`
+          `${colorMode}:bg-neutral-100`
         )}
       >
         <div className="col col-5 px-4">

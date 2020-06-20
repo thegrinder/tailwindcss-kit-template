@@ -8,17 +8,23 @@ route: utilities/spacing
 
 import { Playground } from 'docz';
 import resolveConfig from 'tailwindcss/resolveConfig';
-import { ClassNamesTable } from '../../docz-components';
+import { ClassNamesTable, ResponsivenessTable } from '../../docz-components';
 import { convertToDocsTable } from '../../helpers';
 import { getMarginClassNames, getPaddingClassNames } from './spacing';
 
-## Padding
+## Variants
+
+<ResponsivenessTable />
+
+## Classes
+
+### Padding
 
 <ClassNamesTable
   data={convertToDocsTable(getPaddingClassNames(resolveConfig().theme.spacing))}
 />
 
-## Margin
+### Margin
 
 <ClassNamesTable
   data={convertToDocsTable(getMarginClassNames(resolveConfig().theme.spacing))}
