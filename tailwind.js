@@ -11,6 +11,9 @@ const {
 // base
 const base = require('./src/base/base');
 
+// variants
+const { screensTheme } = require('./src/variants/responsiveness');
+
 // utilities
 const {
   backgroundColor,
@@ -48,12 +51,7 @@ module.exports = {
       3: '0.75rem',
       4: '1rem',
     },
-    screens: {
-      sm: '576px',
-      md: '768px',
-      lg: '992px',
-      xl: '1200px',
-    },
+    screens: screensTheme,
     fontWeights: fontWeightsTheme,
     fontSize: fontSizeTheme,
     lineHeight: lineHeightTheme,
