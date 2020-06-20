@@ -9,12 +9,9 @@ route: variants/responsiveness
 import { ResponsivenessTable } from '../../docz-components';
 import { screensTheme } from './screens-theme';
 
-<ResponsivenessTable
-  data={Object.keys(screensTheme).reduce(
-    (acc, modifier) => ({
-      ...acc,
-      [modifier]: `@media (min-width :${screensTheme[modifier]}) { ... }`,
-    }),
-    {}
-  )}
-/>
+<ResponsivenessTable />
+
+List of responsive utilities
+
+- [flex-grid](/utilities/flex-grid)
+- [font-size](/utilities/font-size)

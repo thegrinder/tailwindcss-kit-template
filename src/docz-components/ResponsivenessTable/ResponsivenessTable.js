@@ -2,8 +2,17 @@ import React, { Fragment } from 'react';
 import classNames from 'classnames';
 import { useColorMode } from 'theme-ui';
 import { colors } from '../../colors';
+import { screensTheme } from '../../variants/responsiveness/screens-theme';
 
-export const ResponsivenessTable = ({ data }) => {
+const data = Object.keys(screensTheme).reduce(
+  (acc, modifier) => ({
+    ...acc,
+    [modifier]: `@media (min-width :${screensTheme[modifier]}) { ... }`,
+  }),
+  {}
+);
+
+export const ResponsivenessTable = () => {
   const [colorMode] = useColorMode();
   return (
     <div

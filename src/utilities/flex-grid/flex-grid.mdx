@@ -6,10 +6,16 @@ route: utilities/flex-grid
 
 # Flex grid
 
-import { ClassNamesTable } from '../../docz-components';
+import { ClassNamesTable, ResponsivenessTable } from '../../docz-components';
 import { convertToDocsTable } from '../../helpers';
 import { getFlexGridClassNames } from './flex-grid';
 import { flexGridTheme } from './flex-grid-theme';
+
+## Variants
+
+<ResponsivenessTable />
+
+## Classes
 
 <ClassNamesTable
   data={convertToDocsTable(getFlexGridClassNames(flexGridTheme.columns))}
