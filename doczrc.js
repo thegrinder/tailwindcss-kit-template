@@ -61,27 +61,30 @@ const light = {
   },
 };
 
-const theme = {
-  themeConfig: {
-    colors: {
-      modes: {
-        dark,
-        light,
+const themeConfig = {
+  colors: {
+    modes: {
+      dark,
+      light,
+    },
+  },
+  prism: {
+    dark: {
+      plain: {
+        backgroundColor: darkTheme.neutral[50],
       },
     },
-    prism: {
-      dark: {
-        plain: {
-          backgroundColor: darkTheme.neutral[50],
-        },
-      },
-      light: {
-        plain: {
-          backgroundColor: lightTheme.neutral[50],
-        },
+    light: {
+      plain: {
+        backgroundColor: lightTheme.neutral[50],
       },
     },
   },
 };
 
-export default theme;
+const config = {
+  themeConfig,
+  base: '/tailwindcss-kit-template/',
+};
+
+export default config;
