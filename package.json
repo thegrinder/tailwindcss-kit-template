@@ -1,7 +1,7 @@
 {
   "name": "tailwindcss-kit-template",
   "version": "0.0.0-development",
-  "description": "Set of helpful tailwindcss utilities and components",
+  "description": "Custom set of tailwindcss utilities and components",
   "keywords": [
     "tailwind",
     "tailwindcss",
