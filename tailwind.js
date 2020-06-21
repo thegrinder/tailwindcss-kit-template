@@ -39,6 +39,7 @@ const link = require('./src/components/link/link');
 const loadingBar = require('./src/components/loading-bar/loading-bar');
 const modal = require('./src/components/modal/modal');
 const outlinedLabel = require('./src/components/outlined-label/outlined-label');
+const radio = require('./src/components/radio/radio');
 const spinner = require('./src/components/spinner/spinner');
 
 module.exports = {
@@ -128,6 +129,7 @@ module.exports = {
     loadingBar,
     modal,
     outlinedLabel,
+    radio,
     spacing,
     spinner,
     textAlign,
