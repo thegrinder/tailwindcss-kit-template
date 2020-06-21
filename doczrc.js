@@ -212,6 +212,7 @@ const themeConfig = {
 const config = {
   themeConfig,
   base: '/tailwindcss-kit-template/',
+  ignore: ['readme.md', 'license.md'],
 };
 
 export default config;
