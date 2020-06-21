@@ -15,12 +15,12 @@ const buttonSizes = {
   },
   md: {
     padding: '0 1.25rem',
-    height: '2.5rem',
+    height: '2.75rem',
     fontSize: '1rem',
   },
   lg: {
     padding: '0 1.5rem',
-    height: '3rem',
+    height: '3.5rem',
     fontSize: '1.25rem',
   },
 };
