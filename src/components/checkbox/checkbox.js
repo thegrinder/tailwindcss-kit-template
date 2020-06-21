@@ -18,7 +18,7 @@ const checkboxPlugin = ({ addComponents, e }) => {
         '&:after': {
           content: `""`,
           position: 'absolute',
-          top: '24%',
+          top: '25%',
           left: '0',
           right: '0',
           margin: 'auto',
