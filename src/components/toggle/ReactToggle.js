@@ -7,10 +7,9 @@ const Toggle = ({ children, className, ...rest }) => {
   return (
     <label
       className={classNames(
-        'inline-flex',
+        'flex',
         'items-center',
         'justify-between',
-        'w-full',
         className
       )}
     >
