@@ -1,0 +1,48 @@
+---
+name: Toggle
+menu: Components
+route: /components/toggle
+---
+
+# Toggle
+
+import { Playground } from 'docz';
+import Toggle from './ReactToggle';
+
+### React snippet
+
+```jsx
+import React from 'react';
+import classNames from 'classnames';
+import { useColorMode } from 'theme-ui';
+
+const Toggle = ({ children, className, ...rest }) => {
+  const [colorMode] = useColorMode();
+  return (
+    <label
+      className={classNames(
+        'inline-flex',
+        'items-center',
+        'justify-between',
+        'w-full',
+        className
+      )}
+    >
+      <span className="pr-4">{children}</span>
+      <input
+        type="checkbox"
+        className={classNames('toggle-input', `${colorMode}:toggle-input`)}
+        {...rest}
+      />
+      <span className="toggle-slider" />
+    </label>
+  );
+};
+```
+
+<Playground>
+  <div className="w-48">
+    <Toggle className="mb-6">Regular</Toggle>
+    <Toggle disabled>Disabled</Toggle>
+  </div>
+</Playground>

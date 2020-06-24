@@ -40,6 +40,7 @@ const modal = require('./src/components/modal/modal');
 const outlinedLabel = require('./src/components/outlined-label/outlined-label');
 const radio = require('./src/components/radio/radio');
 const spinner = require('./src/components/spinner/spinner');
+const toggle = require('./src/components/toggle/toggle');
 
 module.exports = {
   theme: {
@@ -136,6 +137,7 @@ module.exports = {
     spinner,
     textAlign,
     textColor,
+    toggle,
   ],
   options: {
     important: false,
