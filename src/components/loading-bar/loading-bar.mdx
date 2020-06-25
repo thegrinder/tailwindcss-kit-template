@@ -7,6 +7,7 @@ route: /components/loading-bar
 # Loading bar
 
 import { Playground } from 'docz';
+import classNames from 'classnames';
 import { useColorMode } from 'theme-ui';
 import LoadingBar from './ReactLoadingBar';
 
@@ -35,6 +36,10 @@ const LoadingBar = ({ className, ...rest }) => {
 <Playground>
   {() => {
     const [colorMode] = useColorMode();
-    return <LoadingBar />;
+    return (
+      <div className={classNames('h-10', `${colorMode}:bg-primary-500`)}>
+        <LoadingBar />
+      </div>
+    );
   }}
 </Playground>

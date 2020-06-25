@@ -29,10 +29,11 @@ const loadingBarPlugin = ({ addComponents, e }) => {
       overflowX: 'hidden',
       height: '.25rem',
       opacity: '.7',
+      backgroundColor: 'transparent',
       '&:before, &:after': {
         content: `""`,
         position: 'absolute',
-        height: '.25rem',
+        height: '.375rem',
         width: '10%',
         left: '-15%',
       },
@@ -47,13 +48,11 @@ const loadingBarPlugin = ({ addComponents, e }) => {
 
   const loadingBarModes = {
     [`.${e(`${lightModeKey}:loading-bar`)}`]: {
-      background: loadingBarTheme[lightModeKey].barBackground,
       '&:after': {
         background: loadingBarTheme[lightModeKey].barColor,
       },
     },
     [`.${e(`${darkModeKey}:loading-bar`)}`]: {
-      background: loadingBarTheme[darkModeKey].barBackground,
       '&:after': {
         background: loadingBarTheme[darkModeKey].barColor,
       },
