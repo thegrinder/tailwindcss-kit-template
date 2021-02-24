@@ -13,6 +13,7 @@
     "url": "https://github.com/thegrinder/tailwindcss-kit-template.git"
   },
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build:dev": "node_modules/tailwindcss/lib/cli.js build ./styles.css -c ./tailwind.js -o ./dist/styles.css",
     "commit": "git-cz",

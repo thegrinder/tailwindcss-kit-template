@@ -1,3 +1,7 @@
 const tailwindConfig = require('./tailwind');
+const { colors } = require('./src/colors');
 
-module.exports = tailwindConfig;
+module.exports = {
+  colors,
+  tailwindConfig,
+};
